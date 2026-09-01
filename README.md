@@ -1,10 +1,10 @@
 # free-for.dev
 
-Developers and Open Source authors now have many services offering free tiers, but finding them all takes time to make informed decisions.
+Developers and open-source authors now have many services offering free tiers, but finding them all takes time to make informed decisions.
 
 This is a list of software (SaaS, PaaS, IaaS, etc.) and other offerings with free developer tiers.
 
-The scope of this particular list is limited to things that infrastructure developers (System Administrator, DevOps Practitioners, etc.) are likely to find useful. We love all the free services out there, but it would be good to keep it on topic. It's a grey line sometimes, so this is opinionated; please don't feel offended if I don't accept your contribution.
+The scope of this particular list is limited to things that infrastructure developers (System Administrators, DevOps Practitioners, etc.) are likely to find useful. We love all the free services out there, but it would be good to keep it on topic. It's a grey line sometimes, so this is opinionated; please don't feel offended if I don't accept your contribution.
 
 This list results from Pull Requests, reviews, ideas, and work done by 1600+ people. You can also help by sending [Pull Requests](https://github.com/ripienaar/free-for-dev) to add more services or remove ones whose offerings have changed or been retired.
 
@@ -13,6 +13,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
 **NOTE**: This list is only for as-a-Service offerings, not for self-hosted software. To be eligible, a service must offer a free tier, not just a free trial. The free tier must be for at least a year if it is time-bucketed. We also consider the free tier from a security perspective, so SSO is fine, but I will not accept services that restrict TLS to paid-only tiers.
 
 # Table of Contents
+
 
   * [Major Cloud Providers' Always-Free Limits](#major-cloud-providers)
   * [Cloud management solutions](#cloud-management-solutions)
@@ -69,7 +70,6 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Visitor Session Recording](#visitor-session-recording)
   * [Web Hosting](#web-hosting)
   * [Commenting Platforms](#commenting-platforms)
-  * [Browser based hardware emulation](#browser-based-hardware-emulation-written-in-javascript)
   * [Remote Desktop Tools](#remote-desktop-tools)
   * [Other Free Resources](#other-free-resources)
 
@@ -80,7 +80,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
     * Cloud Firestore - 1GB storage, 50,000 reads, 20,000 writes, 20,000 deletes per day
     * Compute Engine - 1 non-preemptible e2-micro, 30GB HDD, 5GB snapshot storage (restricted to certain regions), 1 GB network egress from North America to all region destinations (excluding China and Australia) per month
     * Cloud Storage - 5GB, 1GB network egress
-    * Cloud Shell - Web-based Linux shell/primary IDE with 5GB of persistent storage. 60 hours limit per week
+    * Cloud Shell - Web-based Linux shell/primary IDE with 5GB of persistent storage. 60-hour limit per week
     * Cloud Pub/Sub - 10GB of messages per month
     * Cloud Functions - 2 million invocations per month (includes both background and HTTP invocations)
     * Cloud Run - 2 million requests per month, 360,000 GB-seconds memory, 180,000 vCPU-seconds of compute time, 1 GB network egress from North America per month
@@ -88,30 +88,25 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
     * BigQuery - 1 TB of querying per month, 10 GB of storage each month
     * Cloud Build - 120 build-minutes per day
     * [Google Colab](https://colab.research.google.com/) - Free Jupyter Notebooks development environment.
-    * [Kaggle](https://www.kaggle.com/) - Jupyter Notebooks with 4 CPU cores and 30 GB RAM computational environment without any weekly usage limits. With Phone number verification - 1 Nvidia Tesla P100 GPU or 2x Nvidia Tesla T4 GPU can be added with usage limit of 30 GPU hours/week for free. With Identity verification - 1 TPU v3-8 with 96 CPU cores and 330 GB RAM is available with usage limit of 20 hours/week for free. Check [Technical Specifications](https://www.kaggle.com/docs/notebooks#technical-specifications) for more details.
+    * [Kaggle](https://www.kaggle.com/) - Jupyter Notebooks with 4 CPU cores and 30 GB RAM computational environment without any weekly usage limits. With Phone number verification, 1 Nvidia Tesla P100 GPU or 2x Nvidia Tesla T4 GPU can be added with a usage limit of 30 GPU hours/week for free. With Identity verification - 1 TPU v3-8 with 96 CPU cores and 330 GB RAM is available with a usage limit of 20 hours/week for free. Check [Technical Specifications](https://www.kaggle.com/docs/notebooks#technical-specifications) for more details.
+    * [ChromeRemoteDesktop](https://remotedesktop.google.com/) - Free remote desktop app with practically no limit on the number of devices, owned by Google, so needs a Google account.
+    * [Google AI Studio](https://aistudio.google.com/) - Get free access to Gemini 3.5 Flash, Gemini 3 Flash and Gemma 4 models. The free tier for Flash offers 5 requests per minute, 20 requests per day, and 250k input tokens per minute. Meanwhile the free tier for Gemma 4 offers 30 requests per minute, 14.4k requests per day, but (only) 16k input tokens per minute.
     * Full, detailed list - https://cloud.google.com/free
 
   * [Amazon Web Services](https://aws.amazon.com)
-    * [CloudFront](https://aws.amazon.com/cloudfront/) - 1TB egress per month and 2M Function invocations per month
-    * [CloudWatch](https://aws.amazon.com/cloudwatch/) - 10 custom metrics and ten alarms
-    * [CodeBuild](https://aws.amazon.com/codebuild/) - 100min of build time per month
-    * [CodeCommit](https://aws.amazon.com/codecommit/) - 5 active users,50GB storage, and 10000 requests per month
-    * [CodePipeline](https://aws.amazon.com/codepipeline/) - 1 active pipeline per month
+    * [CloudFront](https://aws.amazon.com/cloudfront/) - 1TB egress/month, 10M HTTP requests, and 2M Function invocations/month
+    * [CloudWatch](https://aws.amazon.com/cloudwatch/) - 10 custom metrics and alarms, 1M API requests, 5GB of log data ingestion and 5GB of log data archive
+    * [CodeBuild](https://aws.amazon.com/codebuild/) - 100min of build time/month
+    * [CodeCommit](https://aws.amazon.com/codecommit/) - 5 active users, 5k repositories/account, 50GB storage/month and 10K requests/month
+    * [CodePipeline](https://aws.amazon.com/codepipeline/) - 1 active pipeline/month
     * [DynamoDB](https://aws.amazon.com/dynamodb/) - 25GB NoSQL DB
-    * [EC2](https://aws.amazon.com/ec2/) - 750 hours per month of t2.micro or t3.micro(12mo). 100GB egress per month
-    * [EBS](https://aws.amazon.com/ebs/) - 30GB per month of General Purpose (SSD) or Magnetic(12mo)
-    * [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/) - 750 hours per month(12mo)
-    * [RDS](https://aws.amazon.com/rds/) - 750 hours per month of db.t2.micro, db.t3.micro, or db.t4g.micro, 20GB of General Purpose (SSD) storage, 20GB of storage backups(12 mo)
-    * [S3](https://aws.amazon.com/s3/) - 5GB Standard object storage, 20K Get requests and 2K Put requests(12 mo)
-    * [Glacier](https://aws.amazon.com/glacier/) - 10GB long-term object storage
-    * [Lambda](https://aws.amazon.com/lambda/) - 1 million requests per month
-    * [SNS](https://aws.amazon.com/sns/) - 1 million publishes per month
-    * [SES](https://aws.amazon.com/ses/) - 3.000 messages per month (12mo)
+    * [Lambda](https://aws.amazon.com/lambda/) - 1 million requests/month
+    * [SNS](https://aws.amazon.com/sns/) - 1 million publishes/month
+    * [SES](https://aws.amazon.com/ses/) - 3.000 messages/month (6mo)
     * [SQS](https://aws.amazon.com/sqs/) - 1 million messaging queue requests
     * Full, detailed list - https://aws.amazon.com/free/
 
   * [Microsoft Azure](https://azure.microsoft.com)
-    * [Virtual Machines](https://azure.microsoft.com/services/virtual-machines/) - 1 B1S Linux VM, 1 B1S Windows VM (12mo)
     * [App Service](https://azure.microsoft.com/services/app-service/) - 10 web, mobile, or API apps (60 CPU minutes/day)
     * [Functions](https://azure.microsoft.com/services/functions/) - 1 million requests per month
     * [DevTest Labs](https://azure.microsoft.com/services/devtest-lab/) - Enable fast, easy, and lean dev-test environments
@@ -120,22 +115,23 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
     * [Azure DevOps](https://azure.microsoft.com/services/devops/) - 5 active users, unlimited private Git repos
     * [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) - 10 free parallel jobs with unlimited minutes for open source for Linux, macOS, and Windows
     * [Microsoft IoT Hub](https://azure.microsoft.com/services/iot-hub/) - 8,000 messages per day
-    * [Load Balancer](https://azure.microsoft.com/services/load-balancer/) - 1 free public load-balanced IP (VIP)
+    * [Load Balancer](https://azure.microsoft.com/services/load-balancer/) - 750 hours, 15GB data processing and 5 rules (12mo)
     * [Notification Hubs](https://azure.microsoft.com/services/notification-hubs/) - 1 million push notifications
-    * [Bandwidth](https://azure.microsoft.com/pricing/details/bandwidth/) - 15GB Inbound(12mo) & 5GB egress per month
+    * [Bandwidth](https://azure.microsoft.com/pricing/details/bandwidth/) - 15GB Outbound(12mo)
     * [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/) - 25GB storage and 1000 RUs of provisioned throughput
     * [Static Web Apps](https://azure.microsoft.com/pricing/details/app-service/static/) - Build, deploy, and host static apps and serverless functions with free SSL, Authentication/Authorization, and custom domains
-    * [Storage](https://azure.microsoft.com/services/storage/) - 5GB LRS File or Blob storage (12mo)
+    * [Storage](https://azure.microsoft.com/services/storage/) - 100GB LRS transactions (Azure Files), 5GB Blob storage, 10GB LRS Archive Storage, 2x64GB SSD (12mo)
     * [Cognitive Services](https://azure.microsoft.com/services/cognitive-services/) - AI/ML APIs (Computer Vision, Translator, Face detection, Bots, etc) with free tier including limited transactions
     * [Cognitive Search](https://azure.microsoft.com/services/search/#features) - AI-based search and indexation service, free for 10,000 documents
     * [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) - Managed Kubernetes service, free cluster management
     * [Event Grid](https://azure.microsoft.com/services/event-grid/) - 100K ops/month
+    * [Service Bus](https://azure.microsoft.com/products/service-bus/) - 750 hours and 13 million operations Standard tier base unit (12mo)
     * Full, detailed list - https://azure.microsoft.com/free/
 
   * [Oracle Cloud](https://www.oracle.com/cloud/)
     * Compute
        - 2 AMD-based Compute VMs with 1/8 OCPU and 1 GB memory each
-       - 4 Arm-based Ampere A1 cores and 24 GB of memory usable as one VM or up to 4 VMs
+       - 2 Arm-based Ampere A1 cores and 12 GB of memory usable as one VM or up to 2 VMs
        - Instances will be reclaimed when [deemed idle](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#compute__idleinstances)
     * Block Volume - 2 volumes, 200 GB total (used for compute)
     * Object Storage - 10 GB
@@ -169,6 +165,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
 
   * [Zoho](https://www.zoho.com) - Started as an e-mail provider but now provides a suite of services, some of which have free plans. List of services having free plans :
     * [Catalyst by Zoho](https://catalyst.zoho.com) -  PaaS/full-stack cloud platform with a generous [free tier](https://catalyst.zoho.com/free-tier.html)
+    * [Zoho Apptics](https://www.zoho.com/apptics/) - Unified and actionable product analytics to monitor performance, analyze user behavior and collect feedback for mobile, web, and desktop apps with generous Free Forever plan.
     * [Email](https://zoho.com/mail) Free for 5 users. 5GB/user & 25 MB attachment limit, one domain.
     * [Zoho Assist](https://www.zoho.com/assist) - Zoho Assist's forever free plan includes one concurrent remote support license and Access to 5 unattended computer licenses for unlimited duration available for both professional and personnel use.
     * [Sprints](https://zoho.com/sprints) Free for 5 users,5 Projects & 500MB storage.
@@ -196,7 +193,9 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
 
   * [Brainboard](https://www.brainboard.co) - Collaborative solution to visually build and manage cloud infrastructures from end-to-end.
   * [Cloud 66](https://www.cloud66.com/) - Free for personal projects (includes one deployment server, one static site), Cloud 66 gives you everything you need to build, deploy, and grow your applications on any cloud without the headache of the “server stuff.”.
+  * [Cloud Cost Analyzer](https://cca.dragonfractal.com/) - Scan AWS and Azure for cost waste with 92 automated checks including idle NAT gateways, gp2 volumes, and over-provisioned instances. Get savings estimates in a read-only, developer-first CLI. Free tier covers up to 5,000 resources per scan on one AWS account. Paid tiers add resource IDs and exact remediation steps.
   * [deployment.io](https://deployment.io) - Deployment.io helps developers automate deployments on AWS. On our free tier, a developer (single user) can deploy unlimited static sites, web services, and environments. We provide 10 job executions free per month with previews and auto-deploys included in the free tier.
+  * [Parsivex](https://www.parsivex.com) - Parsivex scans your AWS account for idle EC2, unattached EBS, oversized RDS, stale snapshots, NAT gateway overuse etc. Free tier provides a monthly scan for one AWS account and returns total monthly waste plus a category breakdown. Paid plans give access to itemized findings and scheduled re-scans.
   * [Pulumi](https://www.pulumi.com/) - Modern infrastructure as a code platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
   * [scalr.com](https://scalr.com/) - Scalr is a Terraform Automation and COllaboration (TACO) product used to better collaboration and automation on infrastructure and configurations managed by Terraform. Full Terraform CLI support, OPA integration, and a hierarchical configuration model. No SSO tax. All features are included. Use up to 50 runs/month for free.
 
@@ -222,14 +221,16 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
 ## APIs, Data, and ML
 
   * [Abstract API](https://www.abstractapi.com) - API suite for various use cases, including IP geolocation, phone number validation, or email validation.
+  * [AlphaAI](https://alphai.io/developers) - Financial news API and MCP server. Every article gets per-ticker impact analysis, a category, and a 1-10 relevance score, and SEC Form 4 insider filings are turned into scored events. The free tier includes 20 requests per minute and 100 requests per day on both REST and MCP, no card required.
+  * [AnyHook](https://anyhook.net) - Inbound webhook relay: point a Stripe, GitHub or LINE bot webhook at it and it stores each event before delivering to your handler, retries automatically when your endpoint is down, and keeps a log you can replay from. Endpoints can be created from the API with no account. Free plan includes 3,000 events/month, 1 app, 3 retries and 3 days of retention, no credit card.
   * [Apify](https://www.apify.com/) - Web scraping and automation platform to create an API for any website and extract data. Ready-made scrapers, integrated proxies, and custom solutions. Free plan with $5 platform credits included every month.
   * [APITemplate.io](https://apitemplate.io) - Auto-generate images and PDF documents with a simple API or automation tools like Zapier & Airtable. No CSS/HTML is required. The free plan comes with 50 images/month and three templates.
   * [APIVerve](https://apiverve.com) - Get instant access to over 120+ APIs for free, built with quality, consistency, and reliability in mind. The free plan covers up to 50 API Tokens per month. (Possibly taken down, 2025-06-25)
   * [Arize AI](https://arize.com/) - Machine learning observability for model monitoring and root-causing issues such as data quality and performance drift. Free up to two models.
   * [Beeceptor](https://beeceptor.com) - No-code, cloud-based platform for mocking and debugging multi-protocol APIs (REST, SOAP, gRPC & GraphQL), providing instant servers with rules-based logic, CRUD & stateful mocking, proxying, and CORS management for faster integration and testing. The free plan includes 50 requests per day and provides a public dashboard/endpoint where anyone with the dashboard URL can view submitted requests and responses.
   * [BigDataCloud](https://www.bigdatacloud.com/) - Provides fast, accurate, and free (Unlimited or up to 10K-50K/month) APIs for modern web like IP Geolocation, Reverse Geocoding, Networking Insights, Email and Phone Validation, Client Info and more.
+  * [Brave Search API](https://brave.com/search/api/) - Independent web, news, image, video search and AI/LLM context API, suitable for RAG pipelines and AI agents. Free tier includes $5 in monthly credits (credit card required for verification).
   * [Browse AI](https://www.browse.ai) - Extracting and monitoring data on the web. 1k credits per month for free, equals 1k concurrent requests.
-  * [BrowserCat](https://www.browsercat.com) - Headless browser API for automation, scraping, AI agent web access, image/pdf generation, and more. Free plan with 1k requests per month.
   * [Calendarific](https://calendarific.com) - Enterprise-grade Public holiday API service for over 200 countries. The free plan includes 500 calls per month.
   * [Canopy](https://www.canopyapi.co/) - GraphQL API for Amazon.com product, search, and category data. The free plan includes 100 calls per month.
   * [CarAPI.dev](https://carapi.dev) - Comprehensive automotive data API with VIN decoding, stolen vehicle checks, vehicle valuation, inspection data, and more. Free tier includes 100 requests/month across all 9 endpoints.
@@ -259,12 +260,16 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Disease.sh](https://disease.sh/) - A free API providing accurate data for building the Covid-19 related useful Apps.
   * [Doczilla](https://www.doczilla.app/) - SaaS API empowering the generation of screenshots or PDFs directly from HTML/CSS/JS code. The free plan allows 250 documents month.
   * [Doppio](https://doppio.sh/) - Managed API to generate and privately store PDFs and Screenshots using top rendering technology. The free plan allows 400 PDFs and Screenshots per month.
+  * [DocPenny](https://docpenny.com) - HTML to PDF document generation with templates, webhook delivery, and credit-based pricing. Free plan with 50 monthly credits, no credit card required.
+  * [Doqlo](https://doqlo.com/) - Bulk fill and mail merge PDF forms from CSV using the web app or Public API. The free plan includes 100 output PDFs/month.
   * [drawDB](https://drawdb.app/) - Free and open-source online database diagram editor with no signup required.
   * [DynamicDocs](https://advicement.io) - Generate PDF documents with JSON to PDF API based on LaTeX templates. The free plan allows 50 API calls per month and access to a library of templates.
   * [Earnings Feed](https://earningsfeed.com/api) - Real-time SEC filings, insider trades, and institutional holdings API. Free tier includes 15 requests per minute.
   * [Export SDK](https://exportsdk.com) - PDF generator API with drag-and-drop template editor that provides an SDK and no-code integrations. The free plan has 250 monthly pages, unlimited users, and three templates.
   * [ExtendsClass](https://extendsclass.com/rest-client-online.html) - Free web-based HTTP client to send HTTP requests.
   * [Financial Data](https://financialdata.net/) - Stock market and financial data API. Free plan allows 300 requests per day.
+  * [finlight](https://finlight.me) - Real-time financial news API with entity resolution (tickers, ISIN) and sentiment tagging, available over REST, WebSocket, webhooks and an MCP server. Free tier: 5,000 requests/month on both REST and MCP, 12-hour delayed articles, no card required.
+  * [Firecrawl](https://www.firecrawl.dev/) - API that crawls websites and converts them into clean, LLM-ready markdown or structured data, handling JavaScript rendering, proxies, and rate limits. The free plan includes 1,000 credits per month with no credit card required.
   * [FormatJSONOnline.com](https://formatjsononline.com) - A free, browser-based tool to format, validate,compare and minify JSON data instantly.
   * [FraudLabs Pro](https://www.fraudlabspro.com) - Screen an order transaction for credit card payment fraud. This REST API will detect all possible fraud traits based on the input parameters of an order. The Free Micro plan has 500 transactions per month.
   * [FreeIPAPI](https://freeipapi.com) - Free, Fast and Reliable IP Geolocation API for commercial and non-commercial users available in JSON
@@ -275,6 +280,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [HS Ping](https://hsping.com) - A multi-country HS (Harmonized System) and HTS (Harmonized Tariff System) code lookup API, with a free plan offering 100 lookups/day.
   * [huggingface.co](https://huggingface.co) - Build, train, and deploy NLP models for Pytorch, TensorFlow, and JAX. Free up to 30k input characters/mo.
   * [Insomnia](https://insomnia.rest) - Open-source API client for designing and testing APIs, it supports REST and GraphQL
+  * [Inngest](https://www.inngest.com) - Durable execution and event-driven workflows for TypeScript, Python, and Go. Hobby plan is free with 50k executions/month, 5 concurrent steps, 500k events ingested, and no credit card required.
   * [Invantive Cloud](https://cloud.invantive.com/) - Access over 70 (cloud)platforms such as Exact Online, Twinfield, ActiveCampaign or Visma using Invantive SQL or OData4 (typically Power BI or Power Query). Includes data replication and exchange. Free plan for developers and implementation consultants. Free for specific platforms with limitations in data volumes.
   * [IP Geolocation API by ipwho.org](https://ipwho.org/) - 2,000 free requests per day. Fast, enterprise grade API at non-enterprise prices. Trusted by developers, corporate, government and education clients. Servers in 12+ regions.
   * [IP Geolocation API](https://www.abstractapi.com/ip-geolocation-api) - IP Geolocation API from Abstract - Allows 1,000 free requests.
@@ -282,6 +288,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [ip-api](https://ip-api.com) - IP Geolocation API, Free for non-commercial use, no API key required, limited to 45 req/minute from the same IP address for the free plan.
   * [IP.City](https://ip.city) - 100 Free IP geolocation requests per day
   * [IP2Location.io](https://www.ip2location.io/) - Freemium, fast, and reliable IP geolocation API. Get data like city, coordinates, ISP, ASN, AS data and more. The free plan includes 50k credits per month. IP2Location.io also offers 500 free WHOIS and hosted domain lookups per month. See domain registration details and find domains hosted on a specific IP. Upgrade to a paid plan for more features.
+  * [Proxmint GeoIP](https://proxmint.com/tools/ip-lookup) — Free IP → country/city/ASN JSON API, no key, CORS-open. MaxMind GeoLite2.
   * [ip2geo.dev](https://ip2geo.dev) - IP geolocation API to convert IP addresses into location data including city, country, timezone, ASN, and currency. The free plan includes 1,000 requests per month.
   * [ipaddress.sh](https://ipaddress.sh) - Simple service to get a public IP address in different [formats](https://about.ipaddress.sh/).
   * [ipapi.is](https://ipapi.is/) - A reliable IP Address API from Developers for Developers with the best Hosting Detection capabilities that exist. The free plan offers 1000 lookups without signup.
@@ -298,6 +305,8 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [JSONSwiss](https://www.jsonswiss.com/) - JSONSwiss is a powerful online JSON viewer, editor, and validator. Format, visualize, search, and manipulate JSON data with AI-powered repair, tree view, table view, code generation in 12+ programming languages, convert json to csv, xml, yaml, properties and more.
   * [KillBait API](https://killbait.com/api/doc) - KillBait API allows users to submit URLs for content evaluation, detecting potential clickbait and categorizing articles. The API is designed for moderate publishing frequency, with limits of 1 submission per hour and 10 per day. Media partners can request higher limits.
   * [Kreya](https://kreya.app) - Free gRPC GUI client to call and test gRPC APIs. Can import gRPC APIs via server reflection.
+  * [Labelixa](https://labelixa.com) - Zebra ZPL label rendering and validation API and browser viewer. Free tier includes an anonymous rendering quota and barcode generation with no watermark, no card required.
+  * [LayerCall](https://www.layercall.com) - Fraud and trust scoring for an IP, email, phone, domain or device in one call, plus authorization and Web Bot Auth verification for AI agents. 1,000 lookups/month free, no card required.
   * [LoginLlama](https://loginllama.app) - A login security API to detect fraudulent and suspicious logins and notify your customers. Free for 1,000 logins per month.
   * [Market Data API](https://www.marketdata.app) - Provides real-time and historical financial data for stocks, options, mutual funds, and more. The Free Forever API tier allows for 100 daily API requests at no charge.
   * [Maxim AI](https://getmaxim.ai/) - Simulate, evaluate, and observe your AI agents. Maxim is an end-to-end evaluation and observability platform, helping teams ship their AI agents reliably and >5x faster. Free forever for indie developers and small teams (3 seats).
@@ -308,6 +317,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Mockfly](https://www.mockfly.dev/) - Mockfly is a trusted development tool for API mocking and feature flag management. Quickly generate and control mock APIs with an intuitive interface. The free tier offers 500 requests per day.
   * [Mocko.dev](https://mocko.dev/) - Proxy your API, choose which endpoints to mock in the cloud and inspect traffic, for free. Speed up your development and integration tests.
   * [Multi-Exit IP Address Checker](https://ip.alstra.ca/) -  A free and simple tool to check your exit IP address across multiple nodes and understand how your IP appears to different global regions and services. Useful for testing rule-based DNS splitting tools such as Control D.
+  * [NASdisks Drive Data API](https://www.nasdisks.com/data/) - Free, no-key, CORS-enabled API for NAS HDD/SSD specifications, per-model CMR/SMR classification, and annualized failure rates derived from Backblaze Drive Stats. Returns JSON or CSV, CC BY 4.0, no signup.
   * [News API](https://newsapi.org) - Search news on the web with code, and get JSON results. Developers get 100 queries free each day. Articles have a 24 hour delay.
   * [numlookupapi.com](https://numlookupapi.com) - Free phone number validation API - 100 free requests / month.
   * [OCR.Space](https://ocr.space/) - An OCR API parses image and pdf files that return the text results in JSON format. 25,000 requests per month are free and a 1MB file size limit.
@@ -315,13 +325,14 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Parseur](https://parseur.com) - 20 free pages/month: Extract data from PDFs, emails. AI powered. Full API access.
   * [PDF-API.io](https://pdf-api.io) - PDF Automation API, visual template editor or HTML to PDF, dynamic data integration, and PDF rendering with an API. The free plan comes with one template, 100 PDFs/month.
   * [PDFBolt](https://pdfbolt.com) - Developer-focused PDF generation API designed with privacy in mind. It offers Stripe-inspired documentation and includes 500 free PDF conversions per month.
-  * [pdfEndpoint.com](https://pdfendpoint.com) - Effortlessly convert HTML or URLs to PDF with a simple API. One hundred conversions per month for free.
+  * [Pexafy](https://docs.pexafy.com) - Semantic image search API across 9 free photo sources (Unsplash, Pexels, Pixabay, Kaboompics & more), 9M+ photos under one JSON schema instead of one integration per source. Plain-language queries, reverse image search, filters on color, orientation and license. CORS is open on read endpoints, so it runs from the browser. The free plan includes 5,000 API requests/month and 1 key, no app review.
   * [Pixela](https://pixe.la/) - Free daystream database service. All operations are performed by API. Visualization with heat maps and line graphs is also possible.
   * [Posthook](https://posthook.io) - Schedule webhooks to fire at a future time with automatic retries, delivery tracking, and failure alerting. Free plan includes 1,000 webhooks per month.
   * [Postman](https://postman.com) - Simplify workflows and create better APIs - faster - with Postman, a collaboration platform for API development. Use the Postman App for free forever. Postman cloud features are also free forever with certain limits.
   * [PrefectCloud](https://www.prefect.io/cloud/) - A complete platform for dataflow automation. Free plan includes 5 deployed workflows and 500 minutes of serverless compute credits per month.
   * [Preset Cloud](https://preset.io/) - A hosted Apache Superset service. Forever free for teams of up to 5 users, featuring unlimited dashboards and charts, a no-code chart builder, and a collaborative SQL editor.
   * [ProxySentry](https://proxysentry.io/) - IP API that detects residential proxies and VPNs. ProxySentry.io offers a free tier with 10k requests per month on rapidapi.com.
+  * [Publora](https://publora.com) - Publishing API: post or schedule to 10 social networks with one HTTPS call, or from an AI agent over MCP. Free forever: 15 posts/month, 3 connected accounts, all networks except X.
   * [Reducto](https://reducto.ai) - Turn any unstructured documents (PDF, XLSX, JPG, PPTX, etc.) into structured JSON data. Parse, extract data, and edit PDF forms. Free tier with 15k free credits and pay-as-you-go.
   * [Rendi](https://rendi.dev) - FFmpeg API - A REST API for FFmpeg, run FFmpeg online without handling the infrastructure. Free tier with monthly processing quota and 4 vCPUs available.
   * [RequestBin.com](https://requestbin.com) - Create a free endpoint to which you can send HTTP requests. Any HTTP requests sent to that endpoint will be recorded with the associated payload and headers so you can observe recommendations from webhooks and other services.
@@ -329,14 +340,11 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Scraper's Proxy](https://scrapersproxy.com) - Simple HTTP proxy API for scraping. Scrape anonymously without having to worry about restrictions, blocks, or captchas. First 100 successful scrapes per month free including javascript rendering (more available if you contact support).
   * [ScrapingAnt](https://scrapingant.com/) - Headless Chrome scraping API and free checked proxies service. Javascript rendering, premium rotating proxies, CAPTCHAs avoiding. Free 10,000 API credits.
   * [SerpApi](https://serpapi.com/) - Real-time search engine scraping API. Returns structured JSON results for Google, YouTube, Bing, Baidu, Walmart, and many other machines. The free plan includes 100 successful API calls per month.
-  * [Sheetson](https://sheetson.com) - Instantly turn any Google Sheets into a RESTful API. Free plan available, including 1,000 free rows per sheet.
-  * [SikkerAPI](https://sikkerapi.com) - Free IP Reputation & Threat Intelligence, powered by a globally distributed high interaction honeypot network and community reported abuse incidents. 1,000 free IP lookups, TAXII indicators & reports per day, pull 5,000 fresh IPs from our blacklists daily and monitor your own CIDR ranges (/16) free free.
   * [Simplescraper](https://simplescraper.io) - Trigger your webhook after each operation. The free plan includes 100 cloud scrape credits.
   * [Geekflare API](https://geekflare.com/api/) - Geekflare API lets you scrape websites into Markdown, take screenshots, perform TLS scans and DNS lookups, test load times, and more. The free plan offers 500 API credits per month (e.g., 500 DNS lookups, 250 web scrapes, or 100 screenshots). See [credit mapping](https://docs.geekflare.com/api/api-credit-mapping).
   * [SmartParse](https://smartparse.io) - SmartParse is a data migration and CSV to API platform that offers time- and cost-saving developer tools. The Free tier includes 300 Processing Units per month, Browser uploads, Data quarantining, Circuit breakers, and Job Alerts.
   * [Sofodata](https://www.sofodata.com/) - Create secure RESTful APIs from CSV files. Upload a CSV file and instantly access the data via its API allowing faster application development. The free plan includes 2 APIs and 2,500 API calls per month. You don't need a credit card.
   * [Sqlable](https://sqlable.com/) - A collection of free online SQL tools, including an SQL formatter and validator, SQL regex tester, fake data generator, and interactive database playgrounds.
-  * [Supportivekoala](https://supportivekoala.com/) - Allows you to autogenerate images by your input via templates. The free plan allows you to create up to 50 images per month.
   * [Svix](https://www.svix.com/) - Webhooks as a Service. Send up to 50,000 messages/month for free.
   * [Tavily AI](https://tavily.com/) - API for online search and rapid insights and comprehensive research, with the capability of organization of research results. 1000 request/month for the Free tier with No credit card required.
   * [TemplateFox](https://pdftemplateapi.com) - PDF generation API with a visual template editor, dynamic data merging, and SDKs for 7 languages. Free plan includes 60 PDFs/month and 3 templates.
@@ -344,7 +352,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [TinyMCE](https://www.tiny.cloud) - rich text editing API. Core features are free for unlimited usage.
   * [Tomorrow.io Weather API](https://www.tomorrow.io/weather-api/) - Offers free plan of weather API. Provides accurate and up-to-date weather forecasting with global coverage, historical data and weather monitoring solutions.
   * [Treblle](https://www.treblle.com) - Treblle helps teams build, ship, and govern APIs. With advanced API log aggregation, observability, docs, and debugging. You get all features for free, but there is a limit of up to 250k requests per month on the free tier.
-  * [Trophy](https://trophy.so) - API infrastructure for building gamification features like achievements, streaks, points and leaderboards in web and mobile apps. Free for 100 monthly active users.
+  * [Trophy](https://trophy.so) - Trophy is the gamification layer for consumer apps. Use pre-built APIs and open-source UI components to ship achievements, streaks, points, leaderboards and more. Free for up to 1,000 monthly active users.
   * [UniRateAPI](https://unirateapi.com) - Real-time exchange rates for 590+ currencies and crypto. Unlimited API calls on the free plan, perfect for developers and finance apps.
   * [vatcheckapi.com](https://vatcheckapi.com) - Simple and free VAT number validation API. 150 free validations per month.
   * [vatnode](https://vatnode.dev) - EU VAT number validation REST API with VIES and national tax-registry fallback, returning the official VIES consultation number for audit records. Free tier of 100 validations/month, no credit card.
@@ -353,6 +361,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Weights & Biases](https://wandb.ai) - The developer-first MLOps platform. Build better models faster with experiment tracking, dataset versioning, and model management. Free tier for personal projects only, with 100 GB of storage included.
   * [What Is My IP](https://whatismyip.help) - A free service to check your public IPv4 and IPv6 address and related request data through an API with different output formats for automation, scripts, and network troubleshooting.
   * [What The Diff](https://whatthediff.ai) - AI-powered code review assistant. The free plan has a limit of 25,000 monthly tokens (~10 PRs).
+  * [XFlux](https://www.xfluxapi.com) - X/Twitter read REST API (profiles, search, timelines) plus account monitors. Free tier: 1,000 API calls/month, 1 monitor, instant API key. HTTP webhooks on paid plans from $19/mo.
   * [wolfram.com](https://wolfram.com/language/) - Built-in knowledge-based algorithms in the cloud.
   * [wrapapi.com](https://wrapapi.com/) - Turn any website into a parameterized API. 30k API calls per month.
   * [Zenscrape](https://zenscrape.com/web-scraping-api) - Web scraping API with headless browsers, residentials IPs, and straightforward pricing. One thousand free API calls/month and extra credits for students and non-profits.
@@ -386,7 +395,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Chanty.com](https://chanty.com/) - Chanty is another alternative to Slack. It has a free forever plan for small teams (up to 10) with unlimited public and private conversations, searchable history, unlimited 1:1 audio calls, unlimited voice messages, ten integrations, and 20 GB storage per team.
   * [DevToolLab](https://devtoollab.com) - Online developer tools offering free access to all basic tools, with the ability to auto save one entry per tool, standard processing speed, and community support.
   * [Discord](https://discord.com/) - Chat with public/private rooms. Markdown text, voice, video, and screen sharing capabilities. Free for unlimited users.
-  * [Dubble](https://dubble.so/) - Free Step-by-Step Guide creator. Take screenshots, document processes and colloborate with your team. Also supports async screen recording.
+  * [Dubble](https://dubble.so/) - Free Step-by-Step Guide creator. Take screenshots, document processes and collaborate with your team. Also supports async screen recording.
   * [Duckly](https://duckly.com/) - Talk and collaborate in real time with your team. Pair programming with IDE, terminal sharing, voice, video, and screen sharing. Free for small teams.
   * [element.io](https://element.io/) - A decentralized and open-source communication tool built on Matrix. Group chats, direct messaging, encrypted file transfers, voice and video chats, and easy integration with other services.
   * [evernote.com](https://evernote.com/) - Tool for organizing information. Share your notes and work together with others
@@ -395,6 +404,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Fizzy](https://www.fizzy.do/) - Kanban-based platform for project management and issue tracking. Create public boards, set up webhooks, use card stamping, and track unlimited users - free for up to 1000 items.
   * [flat.social](https://flat.social) - Interactive customizable spaces for team meetings & happy hours socials. Unlimited meetings, free up to 8 concurrent users.
   * [flock.com](https://flock.com) - A faster way for your team to communicate. Free Unlimited Messages, Channels, Users, Apps & Integrations
+  * [GhostChat](https://ghostchat.dev) - Privacy-first live chat widget for websites (~15KB, no cookies, no tracking). Free plan includes 1 site, unlimited messages, a built-in AI chatbot (25 replies/mo), 30-day history, Gmail threading, canned responses and push notifications. No credit card required.
   * [GitBook](https://www.gitbook.com/) - Platform for capturing and documenting technical knowledge - from product docs to internal knowledge bases and APIs. Free plan for individual developers.
   * [GitDailies](https://gitdailies.com) - Daily reports of your team's Commit and Pull Request activity on GitHub. Includes Push visualizer, peer recognition system, and custom alert builder. The free tier has unlimited users, three repos, and 3 alert configs.
   * [gitter.im](https://gitter.im/) - Chat, for GitHub. Unlimited public and private rooms, free for teams of up to 25
@@ -403,6 +413,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [HeySpace](https://hey.space) - Task management tool with chat, calendar, timeline and video calls. Free for up to 5 users.
   * [Huly](https://huly.io/) - All-in-One Project Management Platform (alternative to Linear, Jira, Slack, Notion, Motion) - unlimited users, 10GB storage per workspace, 10GB video(audio) traffic.
   * [Keybase](https://keybase.io/) - Keybase is a FOSS alternative to Slack; it keeps everyone's chats and files safe, from families to communities to companies.
+  * [Knocket](https://trtc.io/solutions/knocket) - Free-forever contact layer for indie developers and small teams: live chat widget for websites and mobile apps (iOS/Android/Flutter/React Native via WebView), a shareable contact page (Linktree-style with socials, booking links, and blog), and a unified Telegram/email inbox. Reply from Telegram directly (no dashboard needed). Meeting scheduler, multi-language, light/dark themes. Companion open-source AI auto-reply agent. No ads, no seat limits.
   * [Linkinize](https://linkinize.com) - Bookmark manager for teams with tagging, multi-workspaces, and collaboration. Free plan includes 4 workspaces and 10 team members.
   * [Lockitbot](https://www.lockitbot.com/) - Reserve and lock shared resources within Slack like Rooms, Dev environments , servers etc. Free for upto 2 resources
   * [meet.jit.si](https://meet.jit.si/) - One-click video conversations, and screen sharing, for free
@@ -418,6 +429,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Pumble](https://pumble.com) - Free team chat app. Unlimited users and message history, free forever.
   * [Quidlo Timesheets](https://www.quidlo.com/timesheets) - A simple timesheet and time tracking app for teams. The free plan has time tracking and generating reports features for up to 10 users.
   * [Raindrop.io](https://raindrop.io) - Private and secure bookmarking app for macOS, Windows, Android, iOS, and Web. Free Unlimited Bookmarks and Collaboration.
+  * [Reezn.io](https://reezn.io/) - Spec-driven development workflow for teams: shifts review left so problems get caught before code is written, instead of piling up in code review. Builds a knowledge graph of your business as you go, which the AI agents use for later features. Free plan: 3 seats, 1 project, 5 features/month.
   * [Revolt.chat](https://revolt.chat/) - An OpenSource alternative for[Discord](https://discord.com/), that respects your privacy. It also have most proprietary features from discord for free. Revolt is a all in one application that is secure and fast, while being 100% free. every features are free. They also have (official & unofficial) plugins support unlike most main-stream chatting applications.
   * [Rocket.Chat](https://rocket.chat/) - Open-source communication platform with Omnichannel features, Matrix Federation, Bridge with others apps, Unlimited messaging, and Full messaging history.
   * [ruttl.com](https://ruttl.com/) - The best all-in-one feedback tool to collect digital feedback and review websites, PDFs, and images.
@@ -437,7 +449,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Tencent RTC](https://trtc.io/) - Tencent Real-Time Communication (TRTC) offers solutions for group audio/video calls.10,000 free minutes/month for the first year.
   * [TimeCamp](https://www.timecamp.com/) - Free time tracking software for unlimited users. Easily integrates with PM tools like Jira, Trello, Asana, etc.
   * [tldraw.com](https://tldraw.com) -  Free open-source white-boarding and diagramming tool with intelligent arrows, snapping, sticky notes, and SVG export features. Multiplayer mode for collaborative editing. Free official VS Code extension available as well.
-  * [transfernow](https://www.transfernow.net/) - simplest, fastest and safest interface to transfer and share files. Send photos, videos and other large files without a manditory subscription.
+  * [transfernow](https://www.transfernow.net/) - simplest, fastest and safest interface to transfer and share files. Send photos, videos and other large files without a mandatory subscription.
   * [Tugboat](https://tugboat.qa) - Preview every pull request, automated and on-demand. Free for all, complimentary Nano tier for non-profits.
   * [twist.com](https://twist.com) - An asynchronous-friendly team communication app where conversations stay organized and on-topic. Free and Unlimited plans are available. Discounts are provided for eligible teams.
   * [userforge.com](https://userforge.com/) - Interconnected online personas, user stories and context mapping.  Helps keep design and dev in sync free for up to 3 personas and two collaborators.
@@ -452,6 +464,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [zoom.us](https://zoom.us/) - Secure Video and Web conferencing add-ons available. The free plan is limited to 40 minutes.
   * [Zulip](https://zulip.com/) - Real-time chat with a unique email-like threading model. The free plan includes 10,000 messages of search history and File storage up to 5 GB. also, it provides a self-hostable open-source version.
   * [RightFeature](https://rightfeature.com/) - Easily collect feedback from your customers, turn customer feedback into your product roadmap. Collect, prioritize, and ship features that actually matter to your users.
+  * [Zeitio](https://zeitio.com/) - Time tracking and invoicing for freelancers and small teams. Free plan includes 1 user, 3 active projects and 3 invoices per month.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
@@ -526,11 +539,10 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [appveyor.com](https://www.appveyor.com/) - CD service for Windows, free for Open Source
   * [bitrise.io](https://www.bitrise.io/) - A CI/CD for mobile apps, native or hybrid. With 200 free builds/month 10 min build time and two team members. OSS projects get 45 min build time, +1 concurrency and unlimited team size.
   * [buddy.works](https://buddy.works/) - A CI/CD with five free projects and one concurrent run (120 executions/month)
-  * [Buildkite](https://buildkite.com) - CI Pipelines free for 3 users and 5k job minutes/month. Test Analytics free 
+  * [Buildkite](https://buildkite.com) - CI Pipelines free for 3 users and 5k job minutes/month. Test Analytics free
     developer tier includes 100k test executions/month, with more free inclusions for open-source projects.
   * [bytebase.com](https://www.bytebase.com/) - Database CI/CD and DevOps. Free under 20 users and ten database instances
   * [CircleCI](https://circleci.com/) - Comprehensive free plan with all features included in a hosted CI/CD service for GitHub, GitLab, and BitBucket repositories. Multiple resource classes, Docker, Windows, Mac OS, ARM executors, local runners, test splitting, Docker Layer Caching, and other advanced CI/CD features. Free for up to 6000 minutes/month execution time, unlimited collaborators, 30 parallel jobs in private projects, and up to 80,000 free build minutes for Open Source projects.
-  * [cirrus-ci.org](https://cirrus-ci.org) - Free for public GitHub repositories
   * [cirun.io](https://cirun.io) - Free for public GitHub repositories
   * [codemagic.io](https://codemagic.io/) - Free 500 build minutes/month
   * [deployhq.com](https://www.deployhq.com/) - 1 project with ten daily deployments (30 build minutes/month)
@@ -544,6 +556,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Squash Labs](https://www.squash.io/) - creates a VM for each branch and makes your app available from a unique URL, Unlimited public & private repos, Up to 2 GB VM Sizes.
   * [Terramate](https://terramate.io/) - Terramate is an orchestration and management platform for Infrastructure as Code (IaC) tools such as Terraform, OpenTofu, and Terragrunt. Free up to 2 users including all features.
   * [Terrateam](https://terrateam.io) - GitOps-first Terraform automation with pull request-driven workflows, project isolation via self-hosted runners, and layered runs for ordered operations. Free for up to 3 users.
+  * [Trigger.dev](https://trigger.dev) - Open-source background jobs and AI agent platform with durable tasks, no timeouts, and realtime. Free plan includes $5 monthly compute credits, 20 concurrent runs, unlimited tasks, 5 team members, 10 schedules, and 1-day log retention.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
@@ -554,7 +567,6 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Bencher](https://bencher.dev/) - A continuous benchmarking tool suite to catch CI performance regressions. Free for all public projects.
   * [BugBug](https://bugbug.io/) - Lightweight test automation tool for web applications. It is easy to learn and doesn't require coding. You can run unlimited tests on your own computer for free. You also get cloud monitoring and CI/CD integration for an additional monthly fee.
   * [checkbot.io](https://www.checkbot.io/) - Browser extension that tests if your website follows 50+ SEO, speed and security best practices. Free tier for smaller websites.
-  *   * [CheckAPI](https://checkapi.io) - API health monitoring with Silent Failure Detection — validates response body via JSON Path assertions and regex, not just HTTP status codes. Free plan includes 10 monitors, 5-minute intervals, all 5 alert channels (Email, Slack, Telegram, Discord, Webhook), and is free for commercial use with no time limit.
   * [Checkly](https://checklyhq.com) - Code-first synthetic monitoring for modern DevOps. Monitor your APIs and apps at a fraction of the price of legacy providers. Powered by a Monitoring as Code workflow and Playwright. Generous free tier for devs.
   * [CORS-Tester](https://cors-error.dev/cors-tester/) - A free tool for developers and API testers to check if an API is CORS-enabled for a given domain and identify gaps. Get actionable insights.
   * [cypress.io](https://www.cypress.io/) - Fast, easy and reliable testing for anything that runs in a browser. Cypress Test Runner is always free and open-source with no restrictions and limitations. Cypress Dashboard is free for open-source projects for up to 5 users.
@@ -562,16 +574,19 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [gridlastic.com](https://www.gridlastic.com/) - Selenium Grid testing with a free plan of up to 4 simultaneous selenium nodes/10 grid starts/4,000 test minutes/month
   * [katalon.com](https://katalon.com) - Provides a testing platform that can help teams of all sizes at different levels of testing maturity, including  Katalon Studio, TestOps (+ Visual Testing free), TestCloud, and Katalon Recorder.
   * [Keploy](https://keploy.io/) - Keploy is a functional testing toolkit for developers. Recording API calls generates E2E tests for APIs (KTests) and mocks or stubs(KMocks). It is free for Open Source projects.
+  * [Lastest](https://lastest.cloud) - Ship fast. Don't break things. AI-supported visual verification and tests you can actually trust. Free forever plan: 1 project, 500 runner-minutes/mo, 1 concurrent run, no credit card.
   * [loadmill.com](https://www.loadmill.com/) - Automatically create API and load tests by analyzing network traffic. Simulate up to 50 concurrent users for up to 60 minutes for free monthly.
   * [lost-pixel.com](https://lost-pixel.com) - holistic visual regression testing for your Storybook, Ladle, Histoire stories and Web Apps. Unlimited team members, totally free for open-source, 7,000 snapshots/month.
-  * [pagegym.com](https://pagegym.com) - Load behvariour and page speed analysis and optimization tool. The free plan provides 10 tests per day, 5 experiments per week, and 15 GB of maximum ingested data per month.
+  * [pagegym.com](https://pagegym.com) - Load behaviour and page speed analysis and optimization tool. The free plan provides 10 tests per day, 5 experiments per week, and 15 GB of maximum ingested data per month.
   * [percy.io](https://percy.io) - Add visual testing to any web app, static site, style guide, or component library.  Unlimited team members, Demo app, and unlimited projects, 5,000 snapshots/month.
   * [qase.io](https://qase.io) - Test management system for Dev and QA teams. Manage test cases, compose test runs, perform tests, track defects, and measure impact. The free tier includes all core features, with 500MB available for attachments and up to 3 users.
-  * [Repeato](https://repeato.app/) - No-code mobile app test automation tool built on top of computer vision and AI. 
+  * [Repeato](https://repeato.app/) - No-code mobile app test automation tool built on top of computer vision and AI.
     Works for native apps, flutter, react-native, web, ionic, and many more app frameworks. The free plan is limited to 10 tests for iOS and 10 for Android, but includes most of the features of the paid plans, including unlimited test runs.
-  * [Requestly](https://requestly.com/) - Open-source Chrome Extension to Intercept, Redirect and Mock HTTP Requests. 
+  * [Requestly](https://requestly.com/) - Open-source Chrome Extension to Intercept, Redirect and Mock HTTP Requests.
     Featuring [Debugger](https://requestly.com/products/web-debugger/), [Mock Server](https://requestly.com/products/mock-server/), [API Client](https://requestly.com/products/api-client/) and [Session Recording](https://requestly.com/products/session-book/).  Redirect URLs, Modify HTTP Headers, Mock APIs, Inject custom JS, Modify GraphQL Requests, Generate Mock API Endpoints, Record session with Network & Console Logs. Create upto 10 rules in Free Tier. Free for open-source.
+  * [Sample Files](https://mzeeshan.me/tools/sample-files) - Collection of free test files across video, audio, document and archive formats, useful for testing and QA.
   * [seotest.me](https://seotest.me/) - Free on-page SEO website tester. 10 free website crawls per day. Useful SEO learning resources and recommendations on how to improve the on-page SEO results for any website regardless of technology.
+  * [Sherlo](https://sherlo.io) - Visual regression testing for React Native apps. Free plan: 1,000 snapshots/month, iOS & Android simulators.
   * [snippets.uilicious.com](https://snippets.uilicious.com) - It's like CodePen but for cross-browser testing. UI-licious lets you write tests like user stories and offers a free platform - UI-licious Snippets - that allows you to run unlimited tests on Chrome with no sign-up required for up to 3 minutes per test run. Found a bug? You can copy the unique URL to your test to show your devs exactly how to reproduce the bug.
   * [SSR (Server-side Rendering) Checker](https://www.crawlably.com/ssr-checker/) - Check SSR (server-side rendering) for any URL by visually comparing the server rendered version of the page with the regular version.
   * [testingbot.com](https://testingbot.com/) - Selenium Browser and Device Testing, [free for Open Source](https://testingbot.com/open-source)
@@ -579,7 +594,6 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [tesults.com](https://www.tesults.com) - Test results reporting and test case management. Integrates with popular test frameworks. Open Source software developers, individuals, educators, and small teams getting started can request discounted and free offerings beyond basic free projects.
   * [UseWebhook.com](https://usewebhook.com) - Capture and inspect webhooks from your browser. Forward to localhost, or replay from history. Free to use.
   * [Vaadin](https://vaadin.com) - Build scalable UIs in Java or TypeScript, and use the integrated tooling, components, and design system to iterate faster, design better, and simplify the development process. Unlimited Projects with five years of free maintenance.
-  * [webhook-test.com](https://webhook-test.com) - Debug and inspect webhooks and HTTP requests with a unique URL during integration. Completely free, you can create unlimited URLs and receive recommendations.
   * [webhook.site](https://webhook.site) - Verify webhooks, outbound HTTP requests, or emails with a custom URL. A temporary URL and email address are always free.
   * [websitepulse.com](https://www.websitepulse.com/tools/) - Various free network and server tools.
   * [kogiQA](https://kogiqa.com) - A web UI automation tool that functions without the need for selectors. Every developer gets 500 actions per month for free.
@@ -590,11 +604,13 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
 
   * [aikido.dev](https://www.aikido.dev) - All-in-one appsec platform covering SCA, SAST, CSPM, DAST, Secrets, IaC, Malware, Container scanning, EOL,... Free plan includes two users, scanning of 10 repos, 1 cloud, 2 containers & 1 domain.
   * [CertKit](https://www.certkit.io/certificate-management) - Manage SSL Certificate issuance, renewal, and monitoring. Search the Certificate Transparency Logs. Free for 3 certificates and 1 user after the beta.
+  * [CertObserver CT Search](https://certobserver.com/ct-search) - Find public SSL/TLS certificates recorded in Certificate Transparency logs. CT search is free but CT monitoring is not.
+  * [CertPost](https://www.certpost.ai) - Live SSL/TLS certificate monitoring on port 443 or custom ports (SMTP/IMAP). Reads the served certificate on the wire, full chain verification, and alerts via email or webhook before expiration. Free tier includes 3 certificates monitored forever.
   * [Corgea](https://corgea.com/) - Free autonomous security platform that finds, validates and fixes insecure code and packages across +20 languages and frameworks. Free plan includes 1 user and 2 repos.
   * [crypteron.com](https://www.crypteron.com/) - Cloud-first, developer-friendly security platform prevents data breaches in .NET and Java applications
   * [CyberChef](https://gchq.github.io/CyberChef/) - A simple, intuitive web app for analyzing and decoding/encoding data without dealing with complex tools or programming languages. Like a Swiss army knife of cryptography & encryption. All features are free to use, with no limit. Open source if you wish to self-host.
   * [Datree](https://www.datree.io/) - Open Source CLI tool to prevent Kubernetes misconfigurations by ensuring that manifests and Helm charts follow best practices as well as your organization’s policies
-  * [Dependabot](https://dependabot.com/) - Automated dependency updates for Ruby, JavaScript, Python, PHP, Elixir, 
+  * [Dependabot](https://dependabot.com/) - Automated dependency updates for Ruby, JavaScript, Python, PHP, Elixir,
     Rust, Java (Maven and Gradle), .NET, Go, Elm, Docker, Terraform, Git Submodules, and GitHub Actions.
   * [DJ Checkup](https://djcheckup.com) - Scan your Django site for security flaws with this free, automated checkup tool. Forked from the Pony Checkup site.
   * [Doppler](https://doppler.com/) - Universal Secrets Manager for application secrets and config, with support for syncing to various cloud providers. Free for five users with basic access controls.
@@ -602,14 +618,16 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [GitGuardian](https://www.gitguardian.com) - Keep secrets out of your source code with automated secrets detection and remediation. Scan your git repos for 350+ types of secrets and sensitive files - Free for individuals and teams of 25 developers or less.
   * [HasMySecretLeaked](https://gitguardian.com/hasmysecretleaked) - Search across 20 million exposed secrets in public GitHub repositories, gists, issues,and comments for Free
   * [Have I been pwned?](https://haveibeenpwned.com) - REST API for fetching the information on the breaches.
+  * [HimitsuShell](https://himitsushell.com) - A shell script DRM compiler that converts shell scripts into obfuscated binaries using an embedded shell interpreter and anti-debugging (alternative to shc). Free unlimited web edition.
   * [hostedscan.com](https://hostedscan.com) - Online vulnerability scanner for web applications, servers, and networks. Ten free scans per month.
   * [Infisical](https://infisical.com/) - Open source platform that lets you manage developer secrets across your team and infrastructure: everywhere from local development to staging/production 3rd-party services. Free for up to 5 developers.
+  * [inspect.software](https://inspect.software/) - Public record of automated open-source repository audits: security posture, maintainability, dependency health, and malicious-package checks, with a versioned methodology and grade badges. Free tier: full access to all published reports, automatic coverage of repositories above the public-interest threshold (≥500 stars, ≥50 forks, or org-owned with ≥250 stars), embeddable badges, and 100 starting credits (5 inspections) for below-threshold repositories.
   * [Internet.nl](https://internet.nl) - Test for modern Internet Standards like IPv6, DNSSEC, HTTPS, DMARC, STARTTLS and DANE
   * [IntoDNS.ai](https://intodns.ai) - DNS and email security analyzer that checks SPF, DKIM, DMARC, DNSSEC, BIMI, MTA-STS, and 40+ blacklists with AI-powered explanations and fix suggestions. 100% free, no signup required.
   * [letsencrypt.org](https://letsencrypt.org/) - Free SSL Certificate Authority with certs trusted by all major browsers
   * [meterian.io](https://www.meterian.io/) - Monitor Java, Javascript, .NET, Scala, Ruby, and NodeJS projects for security vulnerabilities in dependencies. Free for one private project, unlimited projects for open source.
   * [Mozilla Observatory](https://observatory.mozilla.org/) - Find and fix security vulnerabilities in your site.
-  * [Project Gatekeeper](https://gatekeeper.binarybiology.top/) - An All-in-One SSL Toolkit Offering various features like Private Key & CSR Generator, SSL Certificate Decoder, Certificate Matcher and Order SSL Certificate. We offer the users to generate Free SSL Certificates from Let's Encrypt, Google Trust and BuyPass using CNAME Records rather than TXT Records.
+  * [Otterwatch](https://otterwatch.dev/) - Daily SSL/TLS certificate monitoring: expiry alerts (30/7/1 day), chain and OCSP revocation checks, and certificate transparency issuance history. Free forever for 5 domains, no credit card.
   * [Protectumus](https://protectumus.com) - Free website security check, site antivirus, and server firewall (WAF) for PHP. Email notifications for registered users in the free tier.
   * [Public Cloud Threat Intelligence](https://cloudintel.himanshuanand.com/) - High confidence Indicator of Compromise(IOC) targeting public cloud infrastructure, A portion is available on github (https://github.com/unknownhad/AWSAttacks). Full list is available via API
   * [pyup.io](https://pyup.io) - Monitor Python dependencies for security vulnerabilities and update them automatically. Free for one private project, unlimited projects for open source.
@@ -617,11 +635,11 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [SikkerKey](https://sikkerkey.com) - Machine authenticated secrets manager, includes 2 projects, 2 bootstrapped machines, 20 secrets and 7 days audit log retention for free.
   * [Smart Grow Vault](https://vault.smart-grow.app/) - Secure Enterprise-grade platform for managing environment variables and secrets. Free tier includes up to 3 applications and 150 secrets per project.
   * [Socket](https://socket.dev) - Free supply chain security for individual developers, small teams, and open source projects. Includes a free app and firewall CLI tool to protect your code from vulnerable and malicious dependencies. Detects 70+ indicators of supply chain risk.
-  * [SOOS](https://soos.io) - Free, unlimited SCA scans for open-source projects. Detect and fix security threats before release. Protect your projects with a simple and effective solution.
   * [ssllabs.com](https://www.ssllabs.com/ssltest/) - Intense analysis of the configuration of any SSL web server
   * [Sucuri SiteCheck](https://sitecheck.sucuri.net) - Free website security check and malware scanner
   * [TestTLS.com](https://testtls.com) - Test an SSL/TLS service for secure server configuration, certificates, chains, etc. Not limited to HTTPS.
   * [Virgil Security](https://virgilsecurity.com/) - Tools and services for implementing end-to-end encryption, database protection, IoT security, and more in your digital solution. Free for applications with up to 250 users.
+  * [semgrep](https://semgrep.dev) - Scan code for security issues and vulnerable dependencies with SAST and SCA. Free tier includes up to 10 contributors and 10 private repos (unlimited public repos).
 
 **[⬆️ Back to Top](#table-of-contents)**
 
@@ -665,6 +683,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [GetUpdraft](https://www.getupdraft.com) - Distribute mobile apps for testing. The free plan includes one app project, three app versions, 500 MB storage, and 100 app installations per month.
   * [InstallOnAir](https://www.installonair.com) - Distribute iOS & Android apps over the air. Free plan: unlimited uploads, private links, 2-day expiration for guests, 60 days for registered users.
   * [Loadly](https://loadly.io) - iOS & Android beta apps distribution service offers completely free services with unlimited downloads, high-speed downloads, and unlimited uploads.
+  * [DistApp](https://distapp.app) - Manage and distribute Android, iOS and Desktop apps. Useful for tester or self distribution. Try it for free with 2 apps, 1 org, 100 MB storage with unlimited downloads, or self-hosted your self.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
@@ -674,7 +693,6 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Esper](https://esper.io) - MDM and MAM for Android Devices with DevOps. One hundred devices free with one user license and 25 MB Application Storage.
   * [jamf.com](https://www.jamf.com/) -  Device management for iPads, iPhones, and Macs, three devices free
   * [Miradore](https://miradore.com) - Device Management service. Stay up-to-date with your device fleet and secure unlimited devices for free. The free plan offers basic features.
-  * [moss.sh](https://moss.sh) - Help developers deploy and manage their web apps and servers. Free up to 25 git deployments per month
   * [ploi.io](https://ploi.io/) - Server management tool to easily manage and deploy your servers & sites. Free for one server.
   * [runcloud.io](https://runcloud.io/) - Server management focusing mainly on PHP projects. Free for up to 1 server.
   * [serveravatar.com](https://serveravatar.com) - Manage and monitor PHP-based web servers with automated configurations. Free for one server.
@@ -742,15 +760,21 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
 
 ## Monitoring
 
+  * [Pingzo](https://www.pingzoapp.com) - Free tier offers 1 uptime/API monitor with 15-minute check intervals and instant email alerts.
+  * [Accesserty Pulse](https://accesserty.com/en/pulse) - Accesserty Pulse monitors interaction signals and detectable accessibility risks on live websites. Free plans for everyone and 14-day Pro trial.
+  * [AlertKick](https://www.alertkick.com) - server security (eBPF agent for Linux), uptime monitoring, on-call alerting/status pages in one product. Free tier includes 10 uptime monitors and heartbeats, 5-minute check intervals, 7-day retention.
   * [assertible.com](https://assertible.com) - Automated API testing and monitoring. Free plans for teams and individuals.
   * [Better Stack](https://betterstack.com/better-uptime) - Uptime monitoring, incident management, on-call scheduling/alerting, and status pages in a single product. The free plan includes ten monitors with 3-minute check frequency and status pages.
   * [bleemeo.com](https://bleemeo.com) - Free for 3 servers, 5 uptime monitors, unlimited users, unlimited dashboards, unlimited alerting rules.
   * [checklyhq.com](https://checklyhq.com) - Open source E2E / Synthetic monitoring and deep API monitoring for developers. Free plan with one user and 10k API & network / 1.5k browser check runs.
   * [Core Web Vitals History](https://punits.dev/core-web-vitals-historical/) - Find Core Web Vitals history for a url or a website.
+  * [cronalive.com](https://cronalive.com) - Heartbeat monitoring for cron jobs, plus HTTP uptime and TLS expiry checks, and a Laravel package that creates checks from your scheduler. Free tier with 10 checks, HTTP interval from 5 min, 30 days of history, 50k pings/mo.
   * [cronitor.io](https://cronitor.io/) - Performance insights and uptime monitoring for cron jobs, websites, APIs and more. A free tier with five monitors.
   * [datadoghq.com](https://www.datadoghq.com/) - Free for up to 5 nodes
+  * [DeadBro](https://www.deadbro.com) - Rails APM with request-based pricing: live traces, slow SQL, N+1 detection, and error tracking. Free forever for 50k requests/month, 7-day retention, 1 app, 1 uptime check, and email alerts. No credit card required.
   * [deadmanssnitch.com](https://deadmanssnitch.com/) - Monitoring for cron jobs. One free snitch (monitor), more if you refer others to sign up
   * [downtimemonkey.com](https://downtimemonkey.com/) - 60 uptime monitors, 5-minute interval. Email, Slack alerts.
+  * [drumbeats.io](https://drumbeats.io/) - Cron, heartbeat, and uptime monitoring with incident management and status pages. Free for up to 50 monitors with 1-min interval and unlimited team seats.
   * [economize.cloud](https://economize.cloud) - Economize helps demystify cloud infrastructure costs by organizing cloud resources to optimize and report the same. Free for up to $5,000 spent on Google Cloud Platform every month.
   * [fivenines.io](https://fivenines.io/) - Linux server monitoring with real‑time dashboards and alerting - free forever for up to 5 monitored servers at 60-seconds interval. No credit card required.
   * [FlareWarden](https://flarewarden.com) - Uptime, content, dependency, and SSL monitoring with multi-region verification and status pages. Free plan includes 15 monitors, 5-minute checks, and 90 days of history.
@@ -759,9 +783,11 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [incidenthub.cloud](https://incidenthub.cloud/) - Cloud and SaaS status page aggregator - 20 monitors and 2 notification channels (Slack and Discord) are free forever.
   * [inspector.dev](https://www.inspector.dev) - A complete Real-Time monitoring dashboard in less than one minute with a free forever tier.
   * [instatus.com](https://instatus.com) - Get a beautiful status page in 10 seconds. Free forever with unlimited subs and unlimited teams.
-    * [isitdownstatus.com](https://isitdownstatus.com) – Free public JSON API returning real-time status for 500+ popular services (GitHub, Stripe, AWS, etc.). No auth required, CORS enabled.
+  * [isitdownstatus.com](https://isitdownstatus.com) – Free public JSON API returning real-time status for 500+ popular services (GitHub, Stripe, AWS, etc.). No auth required, CORS enabled.
+  * [LastPing](https://lastping.dev) - Dead man's switch for AI agents, cron jobs and CI. Free for individuals with unlimited monitors and destinations. Let AI agents build monitoring for everything including themselves.
   * [linkok.com](https://linkok.com) - Online broken link checker, free for small websites up to 100 pages, completely free for open-source projects.
   * [loader.io](https://loader.io/) - Free load testing tools with limitations
+  * [MarionetteOps.com](https://www.marionetteops.com/) - Server monitoring, public status pages, and service uptime monitoring.
   * [Middleware.io](https://middleware.io/) -  Middleware observability platform provides complete visibility into your apps & stack, so you can monitor & diagnose issues at scale. They have a free forever plan for Dev community use that allows Log monitoring for up to 1M log events, Infrastructure monitoring & APM for up to 2 hosts.
   * [MonitorMonk](https://monitormonk.com) - Minimalist uptime monitoring with beautiful status pages. The Forever Free plan offers HTTPS, Keyword, SSL and Response-time monitorming for 10 websites or api-endpoints, and provides 2 dashboards/status pages.
   * [netdata.cloud](https://www.netdata.cloud/) - Netdata is an open-source tool to collect real-time metrics. It's a growing product and can also be found on GitHub!
@@ -770,33 +796,36 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [OntarioNet.ca CN Test](https://cntest.ontarionet.ca) - Check if a website is blocked in China by the Great Firewall. It identifies DNS pollution by comparing DNS results and ASN information detected by servers in China versus servers in the United States.
   * [pagecrawl.io](https://pagecrawl.io/) -  Monitor website changes, free for up to 6 monitors with daily checks.
   * [pagertree.com](https://pagertree.com/) - Simple interface for alerting and on-call management. Free up to 5 users.
-  * [phare.io](https://phare.io/) - Uptime Monitoring free for up to 100,000 events for unlimited projets and unlimited status pages.
+  * [phare.io](https://phare.io/) - Uptime Monitoring free for up to 100,000 events for unlimited projects and unlimited status pages.
   * [pingbreak.com](https://pingbreak.com/) - Modern uptime monitoring service. Check unlimited URLs and get downtime notifications via Discord, Slack, or email.
   * [Pingmeter.com](https://pingmeter.com/) - 5 uptime monitors with 10-minute interval. Monitor SSH, HTTP, HTTPS, and any custom TCP ports.
   * [pingpong.one](https://pingpong.one/) - Advanced status page platform with monitoring. The free tier includes one public customizable status page with an SSL subdomain. Pro plan is offered to open-source projects and non-profits free of charge.
+  * [Prismix](https://prismix.dev) - Free REST API (GET /api/v1/statuses) returning real-time operational status for 75+ AI services including OpenAI, Anthropic, Gemini, Mistral, and more. No authentication required. [Free tier available with Pro at $10/month]
   * [Pulsetic](https://pulsetic.com) - 10 monitors, 6 Months of historical Uptime/Logs, unlimited status pages, and custom domains included! For infinite time and unlimited email alerts for free. You don't need a credit card.
   * [robusta.dev](https://home.robusta.dev/) - Powerful Kubernetes monitoring based on Prometheus. Bring your own Prometheus or install the all-in-one bundle. The free tier includes up to 20 Kubernetes nodes. Alerts via Slack, Microsoft Teams, Discord, and more. Integrations with PagerDuty, OpsGenie, VictorOps, DataDog, and many other tools.
+  * [Runframe](https://runframe.io/) - On-call alerting, incident management, and public/private status pages. The free plan includes up to 5 users, 1 team, 1 on-call schedule, basic status pages, incident lifecycle, and Slack-native incident response.
   * [Servervana](https://servervana.com) - Advanced uptime monitoring with support for large projects and teams. Provides HTTP monitoring, Browser based monitoring, DNS monitoring, domain monitoring, status pages and more. The free tier includes 10 HTTP monitors, 1 DNS monitor and one status page.
   * [Simple Observability](https://simpleobservability.com) - Powerful server monitoring in a unified platform for metrics and logs, with no setup complexity. Free for one server.
   * [sitesure.net](https://sitesure.net) - Website and cron monitoring - 2 monitors free
   * [skylight.io](https://www.skylight.io/) - Free for first 100,000 requests (Rails only)
-  * [stathat.com](https://www.stathat.com/) - Get started with ten stats for free, no expiration
   * [statuscake.com](https://www.statuscake.com/) - Website monitoring, unlimited tests free with limitations
   * [statusgator.com](https://statusgator.com/) - Status page monitoring, 3 monitors free
   * [supaguard.app](https://supaguard.app/) - Synthetic monitoring from 20+ global regions. The free tier includes 1,000 browser checks/mo with AI-driven self-healing and automated test generation.
+  * [superlog.sh](https://superlog.sh/) - Open-source OpenTelemetry observability (traces, logs, and metrics) with AI-agent incident investigation. The free tier includes 1M spans, 5M logs, and 10M metric points per month with 30-day retention, no credit card required. Fully open-source and self-hostable.
   * [SweetUptime](https://dicloud.net/sweetuptime-server-uptime-monitoring/) - Server monitoring, uptime monitoring, DNS & domain monitoring. Monitor 10 server, 10 uptime, and 10 domain for free.
   * [syagent.com](https://syagent.com/) - Noncommercial free server monitoring service, alerts and metrics.
   * [UptimeObserver.com](https://uptimeobserver.com) - Get 20 uptime monitors with 5-minute intervals and a customizable status page-even for commercial use. Enjoy unlimited, real-time notifications via email and Telegram. No credit card needed to get started.
   * [uptimetoolbox.com](https://uptimetoolbox.com/) - Free monitoring for five websites, 3-minute intervals, public statuspage.
   * [Wachete](https://www.wachete.com) - monitor five pages, checks every 24 hours.
   * [Xitoring.com](https://xitoring.com/) - Uptime monitoring: 20 free, Linux and Windows Server monitoring: 5 free, Status page: 1 free - Mobile app, multiple notification channel, and much more!
+  * [UptimeRobot](https://uptimerobot.com/) - Free uptime monitoring for hobby projects. Includes 50 monitors with 5-minute check intervals, supports HTTP, ping, port, and keyword monitoring.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
 ## Crash and Exception Handling
 
   * [Axiom](https://axiom.co/) - Store up to 0.5 TB of logs with 30-day retention. Includes integrations with platforms like Vercel and advanced data querying with email/Discord notifiers.
-  * [Bugsink](https://www.bugsink.com/) - Error-tracking with Sentry-SDK compatability. Free for up to 5,000 errors/month, or unlimited use when self-hosted.
+  * [Bugsink](https://www.bugsink.com/) - Error-tracking with Sentry-SDK compatibility. Free for up to 5,000 errors/month, or unlimited use when self-hosted.
   * [bugsnag.com](https://www.bugsnag.com/) - Free for up to 2,000 errors/month after the initial trial
   * [CatchJS.com](https://catchjs.com/) - JavaScript error tracking with screenshots and click trails. Free for open-source projects.
   * [elmah.io](https://elmah.io/) - Error logging and uptime monitoring for web developers. Free Small Business subscription for open-source projects.
@@ -818,14 +847,15 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [algolia.com](https://www.algolia.com/) - Hosted search solution with typo-tolerance, relevance, and UI libraries to easily create search experiences. The free "Build" plan includes 1M documents and 10K searches/month. Also offers [developer documentation search](https://docsearch.algolia.com/) for free.
   * [bonsai.io](https://bonsai.io/) - Free 1 GB memory and 1 GB storage
   * [CommandBar](https://www.commandbar.com/) - Unified Search Bar as-a-service, web-based UI widget/plugin that allows your users to search contents, navigations, features, etc. within your product, which helps discoverability. Free for up to 1,000 Monthly Active Users, unlimited commands.
-  * [searchly.com](http://www.searchly.com/) - Free 2 indices and 20 MB storage
+  * [searchly.com](https://www.searchly.com/) - Free 2 indices and 20 MB storage
 
 **[⬆️ Back to Top](#table-of-contents)**
 
 ## Education and Career Development
 
   * [Cisco Networking Academy, Skills for All](https://skillsforall.com/) - Offers free certification-aligned courses in topics like cybersecurity, networking, and Python.
-  * [CloudCertPrep](https://cloudcertprep.io) - Free, open-source AWS certification practice exams with 1,050+ questions for CLF-C02. Features timed mock exams, domain practice, spaced repetition, and progress tracking. 
+  * [CloudCertPrep](https://cloudcertprep.io) - Free, open-source AWS certification practice exams with 1,050+ questions for CLF-C02. Features timed mock exams, domain practice, spaced repetition, and progress tracking.
+  * [CodeTrain](https://codetrain.ai) - AI coding tutor that teaches you on your own codebase and never writes the code for you. Free tier: 10 in-browser lessons/month, Python/JS run client-side, no card required.
   * [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/) - Free short courses from industry-leading experts to get hands-on experience with the latest generative AI tools and techniques in an hour or less.
   * [DevNet Academy](https://devnet-academy.com/) - Free, self-paced training for the Cisco DevNet Expert / CCIE Automation certification. Covers Python Click and Flask-RESTx.
   * [Django-tutorial.dev](https://django-tutorial.dev) - Free online guides for learning Django as their first framework & gives free dofollow backlink to articles written by users.
@@ -847,21 +877,25 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
 
 ## Email
 
+  * [Unitpost](https://www.unitpost.com/) - AI-First Transactional & Marketing Email Service. Free tier: 5,000 emails/mo, 200 emails/day, 10,000 contacts, 5 domains. No credit card required. SDKs, MCP and REST API available.
   * [10minutemail](https://10minutemail.com) - Free, temporary email for testing.
   * [AhaSend](https://ahasend.com) - Transactional email service, free for 1000 emails per month, with unlimited domains, team members, webhooks and message routes in the free plan.
   * [AnonAddy](https://anonaddy.com) - Open-source anonymous email forwarding, create unlimited email aliases for free
   * [anon.li Alias](https://anon.li/alias) - Open source, anonymous email alias/forwarding solution with PGP encryption, reply capability, 10 random & 1 custom alias on the free plan with developer API & CLI.
   * [Antideo](https://www.antideo.com) - 10 API requests per hour for email verification, IP, and phone number validation in the free tier. No Credit Cards are required.
+  * [Anypost](https://anypost.com) - transactional and broadcast email API. 3,000 emails/month free, then as low as 8¢ per 1k
+  * [Atomic Mail](https://atomicmail.ai) - Email built for AI agents, entirely free. Programmatic inbox creation, custom domains, and full send/receive over the open JMAP standard (RFC 8620/8621); hosted MCP server available. A real mailbox service, not disposable/temporary email.
   * [Brevo](https://www.brevo.com/) - 9,000 emails/month, 300 emails/day free
   * [Bump](https://bump.email/) - Free 10 Bump email addresses, one custom domain
   * [Burnermail](https://burnermail.io/) - Free 5 Burner Email Addresses, 1 Mailbox, 7-day Mailbox History
   * [Buttondown](https://buttondown.email/) - Newsletter service. Up to 100 subscribers free
+  * [Canny Pigeons](https://cannypigeons.com/) - DMARC monitoring platform with DNS drift alerts, IP threat intel and unlimited users. First domain is free - no credit card required.
   * [Conduit](https://conduit.email/) - Turn incoming emails into webhooks to trigger your API from emails. The service is completely free.
   * [Contact.do](https://contact.do/) - Contact form in a link (bitly for contact forms)
   * [debugmail.io](https://debugmail.io/) - Easy to use testing mail server for developers
   * [dkimvalidator.com](https://dkimvalidator.com/) - Test if the email's DNS/SPF/DKIM/DMARC settings are correct, free service by roundsphere.com
   * [DNSExit](https://dnsexit.com/) - Up to 2 Email addresses under your domain for free with 100MB of storage space. IMAP, POP3, SMTP, SPF/DKIM support.
-  * [EmailGuard](https://emailguard.lazrek.net/) - Block disposable emails, catch typos, and validate MX records via a simple API. 100 free requests/month.
+  * [EmailGuard](https://emailguard.lazrek.com/) - Block disposable emails, catch typos, and validate MX records via a simple API. 100 free requests/month.
   * [EmailJS](https://www.emailjs.com/) - This is not an entire email server; this is just an email client that you can use to send emails right from the client without exposing your credentials, the free tier has 200 monthly requests, 2 email templates, Requests up to 50Kb, Limited contacts history.
   * [EmailLabs.io](https://emaillabs.io/en) - Send up to 9,000 Emails for free every month, up to 300 emails daily.
   * [EmailQo Email Infrastructure Grader](https://emailqo.com/email-grader) - Free email infrastructure grader that checks SPF, DKIM, DMARC and mail server configuration. Scores any domain out of 100. No signup required.
@@ -874,6 +908,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [ImprovMX](https://improvmx.com) - Free email forwarding.
   * [Inboxes App](https://inboxesapp.com) - Create up to 3 temporary emails a day, then delete them when you're done from within a handy Chrome extension. Perfect for testing signup flows.
   * [inboxkitten.com](https://inboxkitten.com/) - Free temporary/disposable email inbox, with up to 3-day email auto-deletes. Open source and can be self-hosted.
+  * [Is It Disposable](https://isitdisposable.com/) - Detect and block disposable email addresses. Free plan of 250 lookups a month and no card required.
   * [KaiMail](https://kaimail.net) - Email forwarding for custom domains with ARC/DKIM signing. Free plan includes 1 domain, 1 mailbox, 300 emails/month, and up to 1MB message size. Email receiving webhook also available. Special plans for open-source projects.
   * [mail-tester.com](https://www.mail-tester.com) - Test if the email's DNS/SPF/DKIM/DMARC settings are correct, 20 free/month.
   * [Maileroo](https://maileroo.com) - SMTP relay and email API for developers. 5,000 emails per month, unlimited domains, free email verification, blacklist monitoring, mail tester and more.
@@ -882,11 +917,11 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Mailcheck.ai](https://www.mailcheck.ai/) - Prevent users to sign up with temporary email addresses, 120 requests/hour (~86,400 per month)
   * [Maildroppa](https://maildroppa.com) - Up to 100 subscribers and unlimited emails as well as automations for free.
   * [MailerLite.com](https://www.mailerlite.com) - 1,000 subscribers/month, 12,000 emails/month free
-  * [MailerSend.com](https://www.mailersend.com) - Email API, SMTP, 3,000 emails/month free for transactional emails
+  * [MailerSend.com](https://www.mailersend.com) - Email API, SMTP, 500 emails/month free for transactional emails, 100 API requests/day
   * [mailinator.com](https://www.mailinator.com/) - Free, public email system where you can use any inbox you want
   * [Mailjet](https://www.mailjet.com/) - 6,000 emails/month free (200 emails daily sending limit)
   * [mailsac.com](https://mailsac.com) - Free API for temporary email testing, free public email hosting, outbound capture, email-to-slack/websocket/webhook (1,500 monthly API limit)
-  * [Mailtrap.io](https://mailtrap.io/) - Email API, SMTP, 3,500 emails/month free for transactional and marketing emails. Email Sandbox - fake SMTP server for development, free plan with one inbox, 100 messages, no team member, two emails/second, no forward rules.
+  * [Mailtrap.io](https://mailtrap.io/) - Email API and SMTP with 4,000 emails/month free, limited to 150 emails/day. Email Marketing includes 500 contacts and 1,500 emails/month. Email Sandbox includes 50 test emails/month, one sandbox, and up to 10 stored emails.
   * [Mutant Mail](https://www.mutantmail.com/) - Free 10 Email IDs, 1 Domain, 1 Mailbox. Single Mailbox for All Email IDs.
   * [OneSignal](https://onesignal.com/) - 10,000 emails/month,No Credit Cards are required.
   * [Orbisearch](https://orbisearch.com) - Free bulk email validator, 100 validations per day, no signup required.
@@ -894,16 +929,19 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Plunk](https://useplunk.com) - 3K emails/month for free
   * [Postmark](https://postmarkapp.com/) - 100 emails/month free, unlimited DMARC weekly digests.
   * [Proton Mail](https://proton.me/mail) -  Free secure email account service provider with built-in end-to-end encryption. Free 1GB storage.
+  * [Reloop](https://reloop.sh) - Transactional email API and SMTP for developers. Free plan: 3,000 emails/month, 200 emails/day, one custom domain and one agent inbox.
   * [Resend](https://resend.com) - Transactional emails API for developers. 3,000 emails/month, 100 emails/day free, one custom domain.
   * [SendBridge Mail Tester](https://sendbridge.com/mail-tester) — Free email deliverability test with no signup. Generates a unique inbox address, then analyzes SPF, DKIM, DMARC, Rspamd spam score, 23+ RBL blacklists, reverse DNS, and content quality. Unlimited tests, results in seconds, shareable report pages.
   * [Sender](https://www.sender.net) - Up to 15,000 emails/month, up to 2,500 subscribers
   * [Sendpulse](https://sendpulse.com) - 500 subscribers/month, 15,000 emails/month free
   * [SendStreak](https://www.sendstreak.com/) - Email framework as a service, that adds templates, automations, history, etc to your own SMTP server (E.g. AWS, Maileroo, Gmail). Free up to 100 emails/day, no time limit.
   * [SimpleLogin](https://simplelogin.io/) - Open source, self-hostable email alias/forwarding solution. Free 10 Aliases, unlimited bandwidth, unlimited reply/send. Free for educational staff (student, researcher, etc.).
+  * [SMTPfast](https://smtpfa.st/) - SMTPfast is a simple email API for developers with a free tier that includes 3,000 emails/month, 1 domain, and 1,000 contacts, with no credit card required.
   * [Substack](https://substack.com) - Unlimited free newsletter service. Start paying when you charge for it.
+  * [Suped](https://www.suped.com/) - A user-friendly DMARC monitoring platform. The free plan covers one domain with up to 1,000 emails per month.
   * [Sweego](https://www.sweego.io/) - European transactional emails API for developers. 100 emails/day free.
   * [temp-mail.io](https://temp-mail.io) - Free disposable temporary email service with multiple emails at once and forwarding
-  * [Temp-Mail.org](https://temp-mail.org/en/) - Temporary / Disposable Mail Gen Utilizing a range variety of domain. Email Address refreshes everytime, the page is reloaded. It is entirely free and does not include any pricing for their services.
+  * [Temp-Mail.org](https://temp-mail.org/en/) - Temporary / Disposable Mail Gen Utilizing a range variety of domain. Email Address refreshes every time the page is reloaded. It is entirely free and does not include any pricing for their services.
   * [TempMailDetector.com](https://tempmaildetector.com/) - Verify up to 200 emails a month for free and see if an email is temporary or not.
   * [trashmail.com](https://www.trashmail.com) - Free disposable email addresses with forwarding and automatic address expiration
   * [Tuta](https://tuta.com/) - Free secure email account service provider with built-in end-to-end encryption, no ads, no tracking. Free 1GB storage, one calendar (Tuta also have an [paid plan](https://tuta.com/pricing).). Tuta is also partially [open source](https://github.com/tutao/tutanota), so you can self-host.
@@ -911,6 +949,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [verimail.io](https://verimail.io/) - Bulk and API email verification service. 100 free verifications/month
   * [Waitlio](https://waitlio.com/) - Waitlist management software for product launches. Create branded waitlist pages, collect and verify email subscribers, manage signups with tags and analytics. Free plan includes 100 subscribers/month, 1 waitlist, and API access.
   * [Wraps](https://wraps.dev) - email automation workflows, 5k tracked events and unlimited contacts free.
+  * [ZeroSMTP](https://github.com/msgwing/ZeroSMTP) - Free SMTP relay on the msgwing.com domain, up to 200 emails/day, no paid tier. Sends from a shared @msgwing.com address only (no custom domain). Ready-to-run code examples in 15 languages plus Windows Server/Linux/network printer setup guides.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
@@ -920,7 +959,7 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [ConfigCat](https://configcat.com) - ConfigCat is a developer-centric feature flag service with unlimited team size, excellent support, and a reasonable price tag. Free plan up to 10 flags, two environments, 1 product, and 5 Million requests per month.
   * [Flagsmith](https://flagsmith.com) - Release features with confidence; manage feature flags across web, mobile, and server-side applications. Use our hosted API, deploy to your own private cloud, or run on-premise.
   * [GrowthBook](https://growthbook.io) - Open source feature flag and A/B testing provider with built-in Bayesian statistical analysis engine. Free for up to 3 users, unlimited feature flags and experiments.
-  * [Rollgate](https://rollgate.io) - Feature flag management with scheduled releases, instant rollback, and A/B testing. 13 SDKs included. Free plan up to 500K API requests/month, unlimited flags, 3 team members, no credit card required.
+  * [Rollgate](https://rollgate.io) - EU-hosted feature flag management with scheduled releases, instant rollback, and A/B testing. 12 SDKs included. Free plan up to 500K API requests/month, unlimited flags, 3 team members, no credit card required.
   * [Hypertune](https://www.hypertune.com) - Type-safe feature flags, A/B testing, analytics and app configuration, with Git-style version control and synchronous, in-memory, local flag evaluation. Free for up to 5 team members with unlimited feature flags and A/B tests.
   * [Statsig](https://www.statsig.com) - A robust platform for feature management, A/B testing, analytics, and more. Its generous free plan offers unlimited seats, flags, experiments, and dynamic configurations, supporting up to 1 million events per month.
   * [Toggled.dev](https://www.toggled.dev) - Enterprise-ready, scalable multi-regional feature toggles management platform. Free plan up to 10 flags, two environments, unlimited requests. SDK, analytics dashboard, release calendar, Slack notifications, and all other features are included in the endless free plan.
@@ -951,10 +990,12 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [feedback.fish](https://feedback.fish/) - Free plan allows collecting 25 total feedback submissions. Easy to integrate with React and Vue components provided.
   * [FluidForms](https://fluidforms.ai/) - Form builder and backend with AI-driven logic. Free plan includes 100 responses per month, unlimited forms (including AI-created forms), webhooks, and embedding.
   * [Form.taxi](https://form.taxi/) - Endpoint for HTML forms submissions. With notifications, spam blockers, and GDPR-compliant data processing. Free plan for basic usage.
+  * [Formboost.app](https://formboost.app) - Developer-first form backend with simple HTTP endpoints, 500 free submissions/month, spam protection, email notifications, and built-in Slack, Discord & Telegram integrations. No backend required.
   * [Formcarry.com](https://formcarry.com) - HTTP POST Form endpoint, Free plan allows 100 monthly submissions.
   * [Formester.com](https://formester.com) - Share and embed unique-looking forms on your website-no limits on the number of forms created or features restricted by the plan. Get up to 100 submissions every month for free.
-  * [Forminit](https://forminit.com/) - Headless form backend for developers. The free plan allows 50 form submissions per month including file uploads, server-side field validation, email notifications, spam protection and Zapier.
+  * [Forminit](https://forminit.com/) - Headless form backend for developers. The free plan allows 100 form submissions per month including file uploads, server-side field validation, email notifications, spam protection and Zapier.
   * [FormKeep.com](https://www.formkeep.com/) - Unlimited forms with 50 monthly submissions, spam protection, email notification, and a drag-and-drop designer that can export HTML. Additional features include custom field rules, teams, and integrations to Google Sheets, Slack, ActiveCampaign, and Zapier.
+  * [Form Plume](https://formplume.com) - Form Plume is a form backend for HTML and JavaScript forms. One endpoint gets you spam filtering, email notifications, file uploads, webhooks, and a clean inbox. Free for 500 submissions/mo.
   * [formlets.com](https://formlets.com/) - Online forms, unlimited single page forms/month, 100 submissions/month, email notifications.
   * [forms.app](https://forms.app/) - Create online forms with powerful features like conditional logic, automatic score calculator, and AI. Collect up to 100 responses with a free plan, embed your forms on a website, or use them with a link.
   * [formspark.io](https://formspark.io/) -  Form to Email service, free plan allows unlimited forms, 250 submissions per month, support by Customer assistance team.
@@ -963,7 +1004,9 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [Formware.io](https://formware.io/) - Create fully-responsive and captivating forms in seconds, without knowing how to code, and collect unlimited responses for free!
   * [HeroTofu.com](https://herotofu.com/) - Forms backend with bot detection and encrypted archive. Forward submissions via UI to email, Slack, or Zapier. Use your own front end. No server code is required. The free plan gives unlimited forms and 100 submissions per month.
   * [HeyForm.net](https://heyform.net/) - Drag and drop online form builder. The free tier lets you create unlimited forms and collect unlimited submissions. Comes with pre-built templates, anti-spam, and 100MB file storage.
+  * [Jotform.com](https://jotform.com/) - Create online forms for free, collect submissions, accept payments, automate workflows, and get documents signed with built-in e-signatures. Free plan includes 5 forms, 100 monthly submissions, 10 e-sign documents, 10 payment submissions, and more.
   * [Kwes.io](https://kwes.io/) - Feature rich form endpoint. Works great with static sites. The free plan includes up to 1 website with up to 50 monthly submissions.
+  * [Makeform](https://www.makeform.ai/) - Chat-based form builder. The free form builder with unlimited forms and submissions. 99% of the features are free, includes adding logos, conditional logic, file uploads, payments, integrations, and webhooks. Pro Plan ($19/month) enables remove the Makeform Branding, custom domains and team features. Business plan ($59/month) enables RBAC, email verification and single sign on (SSO).
   * [Pageclip](https://pageclip.co/) - The free plan allows one site, one form, and 1,000 monthly submissions.
   * [SimplePDF.eu](https://simplepdf.eu/embed) - Embed a PDF editor on your website and turn any PDF into a fillable form. The free plan allows unlimited PDFs with three submissions per PDF.
   * [smartforms.dev](https://smartforms.dev/) - Powerful and easy form backend for your website, forever free plan allows 50 submissions per month, 250MB file storage, Zapier integration, CSV/JSON export, custom redirect, custom response page, Telegram & Slack bot, single email notifications.
@@ -981,23 +1024,26 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
 
 ## Generative AI
 
-  * [Arize AX](https://arize.com) - AI engineering platform that helps AI eng/PMs, evaluate, and observe AI applications and agents with built-in Alyx agent. Free product inlcudes 25k spans and ingestion volume of 1gb per month.
+  * [Arize AX](https://arize.com) - AI engineering platform that helps AI eng/PMs, evaluate, and observe AI applications and agents with built-in Alyx agent. Free product includes 25k spans and ingestion volume of 1gb per month.
   * [Audio Enhancer](https://voice-clone.org/tools/audio-enhancer) - AI-powered audio enhancer SaaS that removes noise and echo while preserving natural vocal clarity. totally Free: unlimited one-click enhancements, no login required, supports MP3/WAV/FLAC
   * [Braintrust](https://www.braintrustdata.com/) - Evals, prompt playground, and data management for Gen AI. Free plan gives upto 1,000 private eval rows/week.
   * [Clair](https://askclair.ai/) - Clinical AI Reference. Students have free access to the professional tool suite, which includes Open Search, Clinical Summary, Med Review, Drug Interactions, ICD-10 Codes, and Stewardship. Additionally, a free trial for the professional suite is available.
   * [Comet Opik](https://www.comet.com/site/products/opik/) - Evaluate, test, and ship LLM applications across your dev and production lifecycles. [#opensource](https://github.com/comet-ml/opik/)
+  * [Future AGI](https://futureagi.com) - Open-source platform to evaluate, observe, and improve LLM and AI agent apps, with tracing, evals, simulations, and guardrails. Free tier includes 50GB storage, 2K eval credits, 100K AI-gateway requests/month, 1M tokens of text agent simulation and 60 min of voice simulation, plus unlimited projects/seats and BYOK LLM-as-judge at $0 platform cost. [#opensource](https://github.com/future-agi/future-agi)
+  * [Gonka Broker](https://gonkabroker.com/) - OpenAI-compatible API for open-source models served over the decentralized Gonka.ai GPU network. 1M+ free tokens monthly. Easy integration with many AI tools.
   * [Keywords AI](https://keywordsai.co) - The best LLM monitoring platform. One format to call 200+ LLMs with 2 lines of code. 10,000 free requests every month and $0 for platform features!
   * [Langfuse](https://langfuse.com/) - Open-source LLM engineering platform that helps teams collaboratively debug, analyze, and iterate on their LLM applications. Free forever plan includes 50k observations per month and all platform features. [#opensource](https://github.com/langfuse/langfuse)
-  * [Langtrace](https://langtrace.ai) - enables developers to trace, evaluate, manage prompts and datasets, and debug issues related to an LLM application’s performance. It creates open telemetry standard traces for any LLM which helps with observability and works with any observability client. Free plan offers 50K traces/month.
   * [LangWatch](https://langwatch.ai) - A LLMOps platform helping AI teams measure, monitor, and optimize LLM applications for reliability, cost-efficiency, and performance. With a powerful DSPy component, we enable seamless collaboration between engineers and non-technical teams to fine-tune and productionize GenAI products. Free plan includes all platform features, 1k traces/month and 1 workflow DSPy optimizers. [#opensource](https://github.com/langwatch/langwatch)
+  * [Latitude](https://latitude.so) - Open-source (MIT) LLM observability and evaluation platform to trace, monitor, and evaluate AI agents in production. Free Starter plan includes 20K credits/month, 30-day data retention, and unlimited seats. [#opensource](https://github.com/latitude-dev/latitude-llm)
   * [Lumenfall.ai](https://lumenfall.ai/) - AI media gateway providing unified access to leading image generation models via an OpenAI-compatible API. The platform itself is free to use with zero markup and no subscription fee. Inference costs for most models are billed at provider price, but FLUX.1 [schnell] FP8 is offered free forever with unlimited usage for registered users. Built-in failover and provider resilience included.
   * [Maxim](https://www.getmaxim.ai) - An LLM evaluation and observability platform with agent simulation and prompt playground. Free tier offers 10k monthly logs, access to prompt playground, simulations and evaluations via BYOK.
   * [Mediaworkbench.ai](https://mediaworkbench.ai) - MediaWorkbench.ai offers 100,000 free words for Azure OpenAI, DeepSeek, and Google Gemini models, enabling users to access powerful tools for code generation, deep research, and image creation.
   * [OpenRouter](https://openrouter.ai/models?q=free) - Provides various free AI models including DeepSeek R1, V3, Llama, and Moonshot AI. These models excel in natural language processing and are suitable for diverse development needs. Note that while these models are free to use, they are subject to rate limits. Additionally, OpenRouter offers paid models for more advanced requirements, for instance Claude, OpenAI, Grok, Gemini, and Nova.
-  * [Othor AI](https://othor.ai/) - An AI-native fast, simple, and secure alternative to popular business intelligence solutions like Tableau, Power BI, and Looker. Othor utilizes large language models (LLMs) to deliver custom business intelligence solutions in minutes. The Free Forever plan provides one workspace with five datasource connections for one user, with no limits on analytics. [#opensource](https://github.com/othorai/othor.ai)
   * [Pollinations.AI](https://pollinations.ai/) - easy-to-use, free image generation AI with free API available. No signups or API keys required, and several option for integrating into a website or workflow. [#opensource](https://github.com/pollinations/pollinations)
   * [Portkey](https://portkey.ai/) - Control panel for Gen AI apps featuring an observability suite & an AI gateway. Send & log up to 10,000 requests for free every month.
   * [ReportGPT](https://ReportGPT.app) - AI Powered Writing Assistant. The entire platform is free as long as you bring your own API key.
+  * [telemetry.dev](https://telemetry.dev) - Observability for AI/LLM apps built on OpenTelemetry. Traces model calls and tool steps with tokens, cost, latency and errors; send OTLP over HTTP from any language or use the TypeScript SDKs. Free plan includes 10,000 spans/month, 7-day retention, 1 project and 2 seats, no credit card.
+  * [Transcript LOL](https://transcript.lol/) - Converts audio or video to text using AI. Generates summaries and other insights using LLMs. The free tier includes 2 transcriptions per day. You can upload files, record voice notes, or use links from YouTube, Instagram etc. The free version also supports WhatsApp, Telegram and importing files directly from cloud storages - Google Drive, Dropbox, Box and OneDrive. No API key needed. Sign up and ready to use. Also has apps for mobiles, desktops and chromebooks.
   * [Zenable](https://zenable.io) - Instantly auto-fix outputs from tools like Cursor, Windsurf, and Copilot to meet your company's quality and compliance standards using guardrails built with Policy as Code. The free tier includes 100 tools calls per day to the MCP server and 25 free automated pull request reviews per day via the GitHub App.
 
 **[⬆️ Back to Top](#table-of-contents)**
@@ -1008,10 +1054,10 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [CacheFly](https://portal.cachefly.com/signup/free2023) - Up to 5 TB per month of Free CDN traffic, 19 Core PoPs , 1 Domain and Universal SSL.
   * [cdnjs.com](https://cdnjs.com/) - Simple. Fast. Reliable. Content delivery at its finest. cdnjs is a free and open-source CDN service trusted by over 11% of all websites, powered by Cloudflare.
   * [developers.google.com](https://developers.google.com/speed/libraries/) - The Google Hosted Libraries is a content distribution network for the most popular Open Source JavaScript libraries
-  * [Gcore](https://gcorelabs.com/) - Global content delivery network, 1 TB and 1 million requests per month free and 
+  * [Gcore](https://gcorelabs.com/) - Global content delivery network, 1 TB and 1 million requests per month free and
     free DNS hosting
   * [jsdelivr.com](https://www.jsdelivr.com/) - A free, fast, and reliable open-source CDN. Supports npm, GitHub, WordPress, Deno, and more.
-  * [Microsoft Ajax](https://docs.microsoft.com/en-us/aspnet/ajax/cdn/overview) - The Microsoft Ajax CDN hosts popular third-party JavaScript libraries such as jQuery and enables you to easily add them to your Web application
+  * [Microsoft Ajax](https://learn.microsoft.com/en-us/aspnet/ajax/cdn/overview) - The Microsoft Ajax CDN hosts popular third-party JavaScript libraries such as jQuery and enables you to easily add them to your Web application
   * [Namecheap Supersonic](https://www.namecheap.com/supersonic-cdn/#free-plan) - Free DDoS protection
   * [ovh.ie](https://www.ovh.ie/ssl-gateway/) - Free DDoS protection and SSL certificate
   * [PromoProxy](https://promoproxy.net/) - Free cloud Secure Web Gateway. Free plan includes up to 5 users and 1 GB per day.
@@ -1031,21 +1077,23 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [anvil.works](https://anvil.works) - Web app development with nothing but Python. Free tier with unlimited apps and 30-second timeouts.
   * [Apply.build](https://apply.build/) - Build and deploy your GitHub app for free with 0.5 vCPUs / 512 MiB RAM, European servers, automatic firewall, real-time performance metrics. Run Node.js, Python, Go, Java, static sites, microservices, and more.
   * [appwrite](https://appwrite.io) - Unlimited projects with no project pausing (supports websockets) and authentication service. 1 Database, 3 Buckets, 5 Functions per project in free tier.
-  * [boxd](https://boxd.sh) - Persistent Linux VMs accessible through SSH or CLI. Free tier includes 10 VMs at 2 vCPU / 8 GB RAM / 100 GB disk each, with a public HTTPS URL per VM (so no networking fuss) and the ability to fork any running machine. <30ms cold boot, <100ms fork, <1ms suspend/resume, EU-hosted & EU-made, idle VMs sleep to zero.
   * [Clever Cloud](https://clever.cloud) - European PaaS with automated deployments, autoscaling, managed databases, and Git-based workflows. Includes €20 free credits at signup, a limited DEV plan with free MySQL and PostgreSQL databases, and free allowances for services like Heptapod and FS Buckets.
   * [Choreo](https://wso2.com/choreo/) - AI-native internal developer platform as a service. The free tier includes up to 5 components and $100 credits per month.
   * [codenameone.com](https://www.codenameone.com/) - Open source, cross-platform, mobile app development toolchain for Java/Kotlin developers. Free for commercial use with an unlimited number of projects
+  * [Cohesivity](https://cohesivity.ai) - Headless backend and services, purpose built for AI agents. Includes hosting, databases, storage, LLMs, and third-party APIs. Agentic signup. Free tier includes 10 projects, 100K edge requests, 10 GB object storage, 100 emails, and 5 USD/month in credits for AI and search.
   * [Daestro](https://daestro.com) - Run compute jobs across Cloud Providers & On-Prem. The free tier includes up to 10 concurrent job runs, 2 compute spawns, self-hosted compute, 1 cloud provider, 1 container registry and 1 cron job.
   * [Deno Deploy](https://deno.com/deploy) - Distributed system that runs JavaScript, TypeScript, and WebAssembly at the edge worldwide. The free tier includes 100,000 requests per day and 100 GiB data transfers per month.
   * [domcloud.co](https://domcloud.co) - Linux hosting service that provides CI/CD with GitHub, SSH, and MariaDB/Postgres database. The free version has 1 GB storage and 1 GB network/month limit and is limited to a free domain.
   * [encore.dev](https://encore.dev/) - Backend framework using static analysis to provide automatic infrastructure, boilerplate-free code, and more. Includes free cloud hosting for hobby projects.
+  * [faable.com](https://faable.com/) - Deploy apps with framework auto-detection for Python and Node.js. The free tier includes one 0.5 CPU / 1 GB RAM instance per project, 10 GB bandwidth, 10 successful deploys per day, automatic SSL and a built-in WAF, plus OAuth 2.0 / OIDC authentication. Apps sleep after 2 hours without traffic. European servers.
   * [flightcontrol.dev](https://flightcontrol.dev/) - Deploy web services, databases, and more on your own AWS account with a Git push style workflow. Free tier for users with 1 developer on personal GitHub repos. AWS costs are billed through AWS, but you can use credits and the AWS free tier.
   * [gigalixir.com](https://gigalixir.com/) - Gigalixir provides one free instance that never sleeps and a free-tier PostgreSQL database limited to 2 connections, 10, 000 rows and no backups for Elixir/Phoenix apps.
-  * [leapcell](https://leapcell.io/) - Leapcell is a reliable distributed applications platform, providing everything you need to seamlessly support your rapid growth. The free plan includes 100k service invocations, 10k async tasks and 100k Redis commands.
   * [Northflank](https://northflank.com) - Build and deploy microservices, jobs, and managed databases with a powerful UI, API & CLI. Seamlessly scale containers from version control and external Docker registries. The free tier includes two services, two cron jobs and 1 database.
   * [Ownkube](https://ownkube.io) - Free single-node k3s in your own AWS account, run apps, databases, workers with a git push. Use your AWS credits at peak efficiency.
   * [pipedream.com](https://pipedream.com) - An integration platform built for developers. Develop any workflow based on any trigger. Workflows are code you can run [for free](https://docs.pipedream.com/pricing/). No server or cloud resources to manage.
   * [pythonanywhere.com](https://www.pythonanywhere.com/) - Cloud Python app hosting. Beginner account is free, 1 Python web application at your-username.pythonanywhere.com domain, 512 MB private file storage, one MySQL database
+  * [Runsite](https://runsite.app/) - European PaaS with automated deployments from GitHub for web services or static sites (1 web 0.1 vCPU/256 MB free), managed PostgreSQL and Valkey(Redis) (30 days for free), Transactional Email (3,000 emails/month free), S3 compatible storage (5 GB/free), all what you need for start your web site. Servers located in Germany.
+  * [Val Town](https://www.val.town) - Collaborative TypeScript/JavaScript serverless platform for scripts, HTTP endpoints, and cron jobs. Free plan includes unlimited public vals, 15-minute cron intervals, 1-minute wall-clock time per run, and 3-day log retention. No custom domains on free.
   * [WunderGraph](https://cloud.wundergraph.com) - An open-source platform that allows you to  quickly build, ship and manage modern APIs. Built-in CI/CD, GitHub integration, and automatic HTTPS. Up to 3 projects, 1GB egress, 300 minutes of build time per month on the [free plan](https://wundergraph.com/pricing)
   * [YepCode](https://yepcode.io) - All-in-one platform to connect APIs and services in a serverless environment. It brings all the agility and benefits of NoCode tools but with all the power of using programming languages. The free tier includes [1.000 yeps](https://yepcode.io/pricing/).
 
@@ -1068,9 +1116,9 @@ This list results from Pull Requests, reviews, ideas, and work done by 1600+ peo
   * [onesignal.com](https://onesignal.com/) - Unlimited free push notifications. 10,000 email sends per month, with unlimited contacts and access to Auto Warm Up.
   * [paraio.com](https://paraio.com) - Backend service API with flexible authentication, full-text search and caching. Free for one app, 1GB of app data.
   * [pubnub.com](https://www.pubnub.com/) - Free push notifications for up to 1 million messages/month and 100 active daily devices
-  * [pushbots.com](https://pushbots.com/) - Push notification service. Free for up to 1.5 million pushes/month
   * [pusher.com](https://pusher.com/beams) - Free, unlimited push notifications for 2000 monthly active users. A single API for iOS and Android devices.
   * [simperium.com](https://simperium.com/) - Move data everywhere instantly and automatically, multi-platform, unlimited sending and storage of structured data, max. 2,500 users/month
+  * [snill.ai](https://snill.ai) - AI no-code platform that turns a plain-language description into a complete business system with a relational database, dashboards, workflows, REST API and webhooks. Free plan for solo operators includes 2 apps, 1,000 records and 10 AI requests/day.
   * [Supabase](https://supabase.com) - The Open Source Firebase Alternative to build backends. Free Plan offers Authentication, Realtime Database & Object Storage.
   * [tyk.io](https://tyk.io/) - API management with authentication, quotas, monitoring and analytics. Free cloud offering
   * [zapier.com](https://zapier.com/) - Connect the apps you use to automate tasks. Five zaps every 15 minutes and 100 tasks/month
@@ -1098,11 +1146,13 @@ Update Time, five active automations, webhooks.
 
   * [Alwaysdata](https://www.alwaysdata.com/) - 1 GB free web hosting with support for MySQL, PostgreSQL, RabbitMQ, .NET, Deno, Elixir, Go, Java, Lua, Node.js, PHP, Python, Ruby, Rust. Custom web servers, access via FTP, WebDAV and SSH. Mailbox, mailing list and app installer included. No custom domain on free plan.
   * [Awardspace.com](https://www.awardspace.com) - Free web hosting + a free short domain, PHP, MySQL, App Installer, Email Sending & No Ads.
+  * [boomurl](https://boomurl.com) - Publish static sites (HTML/Markdown/images/PDF or a whole folder) to an instant HTTPS URL with no account; free tier shows a small banner. Custom domains supported.
   * [Bubble](https://bubble.io/) - Visual programming to build web and mobile apps without code, free with Bubble branding.
   * [dAppling Network](https://www.dappling.network/) - Decentralized web hosting platform for Web3 frontends focusing on increasing uptime and security and providing an additional access point for users.
   * [DigitalOcean](https://www.digitalocean.com/pricing) - Build and deploy three static sites for free on the App Platform Starter tier.
   * [FreeFlarum](https://freeflarum.com/) - Community-powered free Flarum hosting for up to 250 users (donate to remove the watermark from the footer).
-  * [Kinsta Static Site Hosting](https://kinsta.com/static-site-hosting/) - Deploy up to 100 static sites for free, custom domains with SSL, 100 GB monthly bandwidth, 260+ Cloudflare CDN locations.
+  * [Harvis.dev](https://harvis.dev) - Static site hosting via CLI (`npx harvis`) with no config files or build step. Includes free subdomain, free form submissions collections, GitHub Actions integration, CloudFlare CDN, free SSL.
+  * [Koyeb](https://www.koyeb.com/) - Serverless platform with a free Hobby plan providing 550 free compute hours/month (512 MB RAM Free tier), 1 free PostgreSQL database, and custom domain SSL.
   * [MDB GO](https://mdbgo.com/) - Free hosting for one project with two weeks Container TTL, 500 MB RAM per project, SFTP - 1G disk space.
   * [Mirin](https://mirin.com) - Website platform for developer-built React, Vue, or Svelte component sites with visual editing, forms, analytics, and global CDN hosting. Free tier includes 1 site with unlimited pages and submissions.
   * [Neocities](https://neocities.org) - Static, 1 GB free storage with 200 GB Bandwidth.
@@ -1112,11 +1162,14 @@ Update Time, five active automations, webhooks.
   * [Qoddi](https://qoddi.com) - PaaS service similar to Heroku with a developer-centric approach and all-inclusive features. Free tier for static assets, staging, and developer apps.
   * [readthedocs.org](https://readthedocs.org/) - Free documentation hosting with versioning, PDF generation, and more
   * [render.com](https://render.com) - Unified cloud to build and run apps and sites with free SSL, a global CDN, private networks, auto-deploys from Git, and completely free plans for web services, databases, and static web pages.
+  * [Revdoku](https://revdoku.com/) — Publish files, reports, custom microsites right from ChatGPT, Claude, Codex and other AI agents as public or password-protected websites. Free tier: 2GB storage, 2 live sites/apps, 1 database (25 MB), 3 AI connections, 1k files/bucket (100 MB/file), basic analytics.
+  * [ShipStatic](https://shipstatic.com) - Static hosting your AI agent can drive itself: `npx @shipstatic/ship ./dist` and the site is live, with no install, no signup, no repo, no build. MCP, SDK and API too. Free accounts keep sites permanently with automatic HTTPS, global edge delivery and unmetered bandwidth; custom domains are paid.
   * [SourceForge](https://sourceforge.net/) - Find, Create, and Publish Open Source software for free
   * [surge.sh](https://surge.sh/) - Static web publishing for Front-End developers. Unlimited sites with custom domain support
   * [tilda.cc](https://tilda.cc/) - One site, 50 pages, 50 MB storage, only the main pre-defined blocks among 170+ available, no fonts, no favicon, and no custom domain
   * [Vercel](https://vercel.com/) - Build, deploy, and host web apps with free SSL, global CDN, and unique Preview URLs each time you `git push`. Perfect for Next.js and other Static Site Generators.
   * [Versoly](https://versoly.com/) - SaaS-focused website builder - unlimited websites, 70+ blocks, five templates, custom CSS, favicon, SEO and forms. No custom domain.
+* [Stormkit](https://www.stormkit.io) - Self-hostable Vercel alternative for building, hosting, and deploying modern frontend and JavaScript applications. Free plan includes 1 app, 50 GB bandwidth, unlimited custom domains, and free SSL.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
@@ -1141,7 +1194,6 @@ Update Time, five active automations, webhooks.
   * [noip.at](https://noip.at/) - Free DDNS service without registration, tracking, logging or advertising. No limit to domains.
   * [noip](https://www.noip.com/) - a dynamic DNS service that allows up to 3 hostnames free with confirmation every 30 days
   * [sslip.io](https://sslip.io/) - Free DNS service that when queried with a hostname with an embedded IP address returns that IP address.
-  * [VolaryDDNS](https://volaryddns.net) - Free high-performant DDNS with no subscriptions or advertisements
   * [zilore.com](https://zilore.com/en/dns) - Free DNS hosting for 5 domains.
   * [zoneedit.com](https://www.zoneedit.com/free-dns/) - Free DNS hosting with Dynamic DNS Support.
   * [Zonomi](https://zonomi.com/) - Free DNS hosting service with instant DNS propagation. Free plan: 1 DNS zone (domain name) with up to 10 DNS records.
@@ -1151,6 +1203,7 @@ Update Time, five active automations, webhooks.
 ## Domain
 
   * [DigitalPlat](https://domain.digitalplat.org) - Free subdomains.
+  * [DNSHE](https://www.dnshe.com/) - Free subdomain registration across multiple domain suffixes, with custom nameserver support.
   * [isroot.in](https://isroot.in) - Free isroot.in subdomains.
   * [pp.ua](https://nic.ua/) - Free pp.ua subdomains.
 
@@ -1160,7 +1213,6 @@ Update Time, five active automations, webhooks.
 
   * [4EVERLAND](https://www.4everland.org/) - Compatible with AWS S3 - APIs, interface operations, CLI, and other upload methods, upload and store files from the IPFS and Arweave networks in a safe, convenient, and efficient manner. Registered users can get 6 GB of IPFS storage and 300MB of Arweave storage for free. Any Arweave file uploads smaller than 150 KB are free.
   * [backblaze.com](https://www.backblaze.com/b2/) - Backblaze B2 cloud storage. Free 10 GB (Amazon S3-like) object storage for unlimited time
-  * [C2 Object Storage](https://c2.synology.com/en-us/pricing/object-storage) - S3 compatibility object storage. 15 GB free storage and 15 GB downloads per month.
   * [filebase.com](https://filebase.com/) - S3 Compatible Object Storage Powered by Blockchain. 5 GB free storage for an unlimited duration.
   * [Modal](https://modal.com) - AI-driven IaaS with generous compute, storage; offers $30 (might be limited to $5 on certain accounts) of free monthly credits
 
@@ -1171,12 +1223,14 @@ Update Time, five active automations, webhooks.
   * [8base.com](https://www.8base.com/) - 8base is a full-stack low-code development platform built for JavaScript developers built on top of MySQL and GraphQL and serverless backend-as-a-service. It allows you to start building web applications quickly using a UI app builder and scale quickly, The Free tier includes rows: 2,500, Storage: 500, Serverless computing: 1Gb/h, and client app users: 5.
   * [airtable.com](https://airtable.com/) - Looks like a spreadsheet, but it's a relational database unlimited bases, 1,200 rows/base, and 1,000 API requests/month
   * [Aiven](https://aiven.io/) - Aiven offers free PostgreSQL, MySQL and Valkey (Redis compatible) plans on its open-source data platform. Single node, 1 CPU, 1GB RAM, and for PostgreSQL and MySQL, 1GB storage. Easy migration to more extensive plans or across clouds.
+  * [BackupDrill](https://backupdrill.com) - Backs up Supabase projects to your own S3/R2/B2 bucket, then runs scheduled restore drills to prove backups restore. Provides a free plan with weekly backups for one project and one restore drill on your first backup.
   * [CockroachDB Cloud](https://www.cockroachlabs.com/pricing/) - Free tier offers 50 million RUs and 10 GiB of storage (same as 15$ worth) free per month. ([What's the Request Units](https://www.cockroachlabs.com/docs/cockroachcloud/metrics-request-units.html))
   * [codehooks.io](https://codehooks.io/) - Easy to use JavaScript serverless API/backend and NoSQL database service with functions, Mongdb-ish queries, key/value lookups, a job system, realtime messages, worker queues, a powerful CLI and a web-based data manager. Free plan has 5GB storage and 60/API calls per minute. 2 developers included. No credit-card required.
   * [Couchbase Capella](https://www.couchbase.com/products/capella/) - deploy a forever free tier fully managed database cluster with 1 node and 8GB storage, built for developers to create the next generation of applications across IoT to AI
   * [CrateDB](https://crate.io/) - Distributed Open Source SQL database for real-time analytics. [Free Tier CRFREE](https://crate.io/lp-crfree): One-node with 2 CPUs, 2 GiB of memory, 8 GiB of storage. One cluster per organization, no payment method needed.
   * [filess.io](https://filess.io) - filess.io is a platform where you can create two databases with up to 10 MB per database of the following DBMS for free: MySQL, MariaDB, MongoDB, and PostgreSQL.
   * [InfluxDB](https://www.influxdata.com/) - Timeseries database, free up to 3MB/5 minutes writes, 30MB/5 minutes reads and 10,000 cardinalities series
+  * [Layerbase](https://layerbase.com/) - 2 free managed databases, pick from: Postgres, MariaDB, Redis, Valkey, DuckDB, SQLite, libSQL, and TypeDB. All with TLS. Branch 7 of 8 free engines, 1 branch per database - 10 GB/day, 50 GB/week, 150 GB/month throughput limits on free. 10 additional engines available on higher tiers with no meters.
   * [MemCachier](https://www.memcachier.com/) - Managed Memcache service. Free for up to 25MB, 1 Proxy Server, and basic analytics
   * [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) - free tier gives 512 MB
   * [Neo4j Aura](https://neo4j.com/cloud/aura/) - Managed native Graph DBMS / analytics platform with a Cypher query language and a REST API. Limits on graph size (200k nodes, 400k relationships).
@@ -1185,7 +1239,6 @@ Update Time, five active automations, webhooks.
   * [Prisma Postgres](https://prisma.io/postgres) - Super fast hosted Postgres built on unikernels and running on bare metal, 500MB total storage, 5 databases, integrated with Prisma ORM.
   * [Qdrant](https://qdrant.tech/) - Vector Database for embedding data, single node cluster with 0.5 vCPU, 1GB RAM, and 4GB disk.
   * [restdb.io](https://restdb.io/) - a fast and straightforward NoSQL cloud database service. With restdb.io you get schema, relations, automatic REST API (with MongoDB-like queries), and an efficient multi-user admin UI for working with data. The free plan allows 3 users, 2500 records, and 1 API request per second.
-  * [Rivestack](https://rivestack.io) - Managed PostgreSQL with pgvector optimized for AI workloads. The free tier includes 2GB storage, daily snapshots, 14-day point-in-time recovery, and a built-in SQL editor that converts search queries to vector embeddings.
   * [SeaTable](https://seatable.io/) - Flexible, Spreadsheet-like Database built by the Seafile team. unlimited tables, 2,000 lines, 1-month versioning, up to 25 team members.
   * [skyvia.com](https://skyvia.com/) - Cloud Data Platform offers a free tier and all plans are completely free while in beta
   * [StackBy](https://stackby.com/) - One tool that combines spreadsheets' flexibility, databases' power, and built-in integrations with your favorite business apps. The free plan includes unlimited users, ten stacks, and a 2GB attachment per stack.
@@ -1197,13 +1250,13 @@ Update Time, five active automations, webhooks.
 
 ## Tunneling, WebRTC, Web Socket Servers and Other Routers
 
-  * [btunnel](https://www.btunnel.in/) - Expose localhost and local tcp server to the internet. Free plan includes file server, custom http request and response headers, basic auth protection and 1 hour tunnel timeout.
   * [cname.dev](https://cname.dev/) - Free and secure dynamic reverse proxy service.
   * [conveyor.cloud](https://conveyor.cloud/) - Visual Studio extension to expose IIS Express to the local network or over a tunnel to a public URL.
   * [Expose](https://expose.dev/) - Expose local sites via secure tunnels. The free plan includes an EU Server, Random subdomains, and Single users.
   * [Hamachi](https://www.vpn.net/) - LogMeIn Hamachi is a hosted VPN service that lets you securely extend LAN-like networks to distributed teams with a free plan that allows unlimited networks with up to 5 people
   * [Hookdeck](https://hookdeck.com/pricing) - Develop, test, and monitor your webhooks from anywhere. 100K requests and 100K attempts per month with three days retention.
   * [localhost.run](https://localhost.run/) - Expose locally running servers over a tunnel to a public URL.
+  * [localtonet](https://localtonet.com/) - Multi-protocol tunneling for HTTP, TLS, TCP, UDP, File Server (Default, SFTP, WebDAV), and Proxy Tunnel (HTTP, SOCKS5, Shadowsocks, VLESS). Free plan: 1 tunnel, 1GB/month bandwidth, 30 min timeout (excl. HTTP Tunnels).
   * [localtunnel](https://theboroer.github.io/localtunnel-www/) - Expose locally running servers over a tunnel to a public URL. Free hosted version, and [open source](https://github.com/localtunnel/localtunnel).
   * [LocalXpose](https://localxpose.io) - Reverse proxy that enables you to expose your localhost servers to the internet. The free plan has 15 minutes tunnel lifetime.
   * [ngrok.com](https://ngrok.com/) - Expose locally running servers over a tunnel to a public URL.
@@ -1239,6 +1292,7 @@ Update Time, five active automations, webhooks.
   * [gleek.io](https://www.gleek.io) - Free description-to-diagrams tool for developers. Create informal UML class, object, or entity-relationship diagrams using your keyword.
   * [GraphQL Inspector](https://github.com/marketplace/graphql-inspector) - GraphQL Inspector outputs a list of changes between two GraphQL schemas. Every difference is precisely explained and marked as breaking, non-breaking, or dangerous.
   * [Helploom](https://helploom.com) - Customer support software that offers a live chat on the free forever plan. Simple, lightweight and beautiful. Setup is a simple copy-paste script. Built by a developer.
+  * [HeyRetro](https://heyretro.io/) - Real-time sprint retrospective platform with voting, timers, surveys, guest collaboration, and ice-breaker games. The forever-free plan includes one board per month, anonymous surveys, and guest link sharing.
   * [Hygger](https://hygger.io) - Project management platform. The free plan offers unlimited users, projects & boards with 100 MB of Storage.
   * [Ilograph](https://www.ilograph.com/) -  interactive diagrams that allow users to see their infrastructure from multiple perspectives and levels of detail. Charts can be expressed in code. The free tier has unlimited private diagrams with up to 3 viewers.
   * [Jira](https://www.atlassian.com/software/jira) - Advanced software development project management tool used in many corporate environments. Free plan for up to 10 users.
@@ -1289,6 +1343,7 @@ Update Time, five active automations, webhooks.
   * [borgbase.com](https://www.borgbase.com/) - Simple and secure offsite backup hosting for Borg Backup. 10 GB free backup space and two repositories.
   * [cloudinary.com](https://cloudinary.com/) - Image upload, powerful manipulations, storage, and delivery for sites and apps, with Ruby, Python, Java, PHP, Objective-C, and more libraries. The free tier includes 25 monthly credits. One credit equals 1,000 image transformations, 1 GB of storage, or 1 GB of CDN usage.
   * [degoo.com](https://degoo.com/) - AI based cloud storage with free up to 20 GB, three devices, 5 GB referral bonus (90 days account inactivity).
+  * [dlvr.sh](https://dlvr.sh/) - Temporary file delivery for agents and automation. Free tier includes 10 deliveries every 24 hours with API, MCP, and CLI access.
   * [Dropshare](https://dropsha.re) - Zero-knowledge file sharing. End-to-end encrypted file sharing with AES-256-GCM encryption, client-side processing, and zero server-side data access. Free uploads for files up to 1GB with no data collection.
   * [embed.ly](https://embed.ly/) - Provides APIs for embedding media in a webpage, responsive image scaling, and extracting elements from a webpage. Free for up to 5,000 URLs/month at 15 requests/second
   * [Ente](https://ente.io/) - Ente is an end-to-end encrypted cloud for photos, videos and 2FA secrets. Can also be self-hosted along with a generous forever free-tier of 10GB. For free tier users, only single replica of data is kept.
@@ -1298,6 +1353,7 @@ Update Time, five active automations, webhooks.
   * [getpantry.cloud](https://getpantry.cloud/) - A simple JSON data storage API perfect for personal projects, hackathons, and mobile apps!
   * [GoFile.io](https://gofile.io/) - Free file sharing and storage platform can be used via web-based UI & also API. unlimited file size, bandwidth, download count, etc. But it will be deleted when a file becomes inactive (no download for more than ten days).
   * [gumlet.com](https://www.gumlet.com/) - Image and video hosting, processing and streaming via CDN. Provides generous free tier of 250 GB / month for videos and 30 GB  / month for images.
+  * [hyperserve.io](https://hyperserve.io/) - Video backend API for developers: accept any format your users upload, transcode to MP4, and deliver globally via CDN. The free tier includes 50 videos, 1 GB per file, and 250 GB bandwidth per month.
   * [icedrive.net](https://www.icedrive.net/) - Simple cloud storage service. 10 GB free storage
   * [image-charts.com](https://www.image-charts.com/) - Unlimited image chart generation with a watermark
   * [ImageEngine](https://imageengine.io/) - ImageEngine is an easy to use global image CDN. Sub 60 sec setup. AVIF and JPEGXL support, WordPress-, Magento-, React-, Vue- plugins and more. Claim your free developer account [here](https://imageengine.io/developer-program/).
@@ -1320,7 +1376,6 @@ Update Time, five active automations, webhooks.
   * [plot.ly](https://plot.ly/) - Graph and share your data. The free tier includes unlimited public files and ten private files
   * [podio.com](https://podio.com/) - You can use Podio with a team of up to five people and try out the features of the Basic Plan, except user management
   * [Proton Drive](https://proton.me/drive) - Ultra-secure cloud storage for files and key documents. Free plan offers 5gb of storage space.
-  * [QRME.SH](https://qrme.sh) - Fast, beautiful bulk QR code generator - no login, no watermark, no ads. Up to 100 URLs per bulk export.
   * [QRtracer](https://qrtracer.io) - Free QR code generator with built-in scan analytics, bulk generation & brand customisation, focused on reliability without any ads.
   * [QuickChart](https://quickchart.io) - Generate embeddable image charts, graphs, and QR codes
   * [redbooth.com](https://redbooth.com) - P2P file syncing, free for up to 2 users
@@ -1338,26 +1393,29 @@ Update Time, five active automations, webhooks.
 
 ## Design and UI
 
+  * [Beste](https://beste.co) - A composition-first website builder based on shadcn/ui blocks. The free plan lets you connect your own custom domain, and includes unlimited pages, multi-language support, blog, forms, and hosting.
   * [BoxySVG](https://boxy-svg.com) - A free installable Web app for drawing SVGs and exporting in SVG, PNG, jpeg, and other formats.
+  * [BrandIcons](https://brandicons.dev) - Favicon API. AI-based discovery for domains without icons or even without web servers. Free tier includes 500,000 requests per month with attribution.
   * [Calendar Icons Generator](https://calendariconsgenerator.app/) - Generate an entire year's worth of unique icons in a single click, absolutely FREE
   * [Canva](https://canva.com) - Free online design tool to create visual content.
   * [CodedThemes](https://codedthemes.com/) - Offers a well-crafted admin dashboard & and UI kits designed to simplify and speed up modern web development.
   * [Excalidraw](https://excalidraw.com/) - A free online drawing document web page with free save to local and export support.
   * [figma.com](https://www.figma.com) - Online, collaborative design tool for teams; free tier includes unlimited files and viewers with a max of 2 editors and three projects.
   * [Flows](https://flows.sh/) - A fully customizable product adoption platform for building onboarding and user engagement experiences. Free for up to 250 monthly tracked users.
+  * [JoyDemo](https://joydemo.com) - Create interactive and clickable demos of your website or app. Free with unlimited demos and unlimited views.
   * [landen.co](https://www.landen.co) - Generate, edit, and publish beautiful websites and landing pages for your startup. All without code. The free tier allows you to have one website, fully customizable and published on the web.
   * [lensdump.com](https://lensdump.com/) - Free cloud image hosting.
   * [Logo.dev](https://www.logo.dev) - Company logo API with 44M+ brands that's as easy as calling a URL. First 10,000 API calls are free.
   * [marvelapp.com](https://marvelapp.com/) - Design, prototyping, and collaboration, free plan limited to one user and project.
   * [Mindmup.com](https://www.mindmup.com/) - Unlimited mind maps for free and store them in the cloud. Your mind maps are available everywhere, instantly, from any device.
   * [Mockplus iDoc](https://www.mockplus.com/idoc) - Mockplus iDoc is a powerful design collaboration & handoff tool. Free Plan includes three users and five projects with all features available.
-  * [Modeldraw.com](https://modeldraw.com) - Complete diagramming platform with UML, system architecture, flowcharts, mind maps, and Agile workflows. Real-time collaboration with unlimited team members, no credit card required.
   * [photopea.com](https://www.photopea.com) - A Free, Advanced online design editor with Adobe Photoshop UI supporting PSD, XCF & Sketch formats (Adobe Photoshop, Gimp and Sketch App).
   * [Plasmic](https://www.plasmic.app/) - A fast, easy-to-use, robust web design tool and page builder that integrates into your codebase. Build responsive pages or complex components; optionally extend with code; and publish to production sites and apps.
   * [Proto.io](https://www.proto.io) - Create fully interactive UI prototypes without coding. The free tier is available when the free trial ends. The free tier includes one user, one project, five prototypes, 100MB of online storage, and a preview of the proto.io app.
   * [Quant Ux](https://quant-ux.com/) - Quant Ux is a prototyping and design tool. - It's completely free and also open source.
   * [Shadcn Studio](https://shadcnstudio.com/theme-editor) - Preview your theme changes across different components and layouts.
   * [smartmockups.com](https://smartmockups.com/) - Create product mockups, 200 free mockups.
+  * [SVGicons.com](https://svgicons.com/) - Free search engine for 312K+ open-source SVG icons with ready-to-use SVG, React, Vue, HTML, and CSS code.
   * [TeleportHQ](https://teleporthq.io/) - Low-code Front-end Design & Development Platform. TeleportHQ is the collaborative front-end platform to instantly create and publish headless static websites. Three free projects, unlimited collaborators, and free code export.
   * [Unicorn Platform](https://unicornplatform.com/) - Effortless landing page builder with hosting. One website for free.
   * [Updrafts.app](https://updrafts.app) - WYSIWYG website builder for tailwindcss-based designs. Free for non-commercial usage.
@@ -1385,9 +1443,10 @@ Update Time, five active automations, webhooks.
   * [here](https://developer.here.com/) - APIs and SDKs for maps and location-aware apps. 250k transactions/month for free.
   * [IP Geolocation](https://ipgeolocation.io/) - Free DEVELOPER plan available with 30K requests/month.
   * [ipstack](https://ipstack.com/) - Locate and identify Website Visitors by IP Address
+  * [LatLng](https://www.latlng.work) - Geocoding, reverse geocoding, places, static maps, and vector map tiles APIs. Free tier includes 3,000 geocoding requests/day, 300 reverse geocoding requests/day, and 100 static map images/day.
   * [locationiq.com](https://locationiq.com/) - Geocoding, Maps, and Routing APIs. Five thousand requests/day for free.
   * [mapbox.com](https://www.mapbox.com/) - Maps, geospatial services and SDKs for displaying map data.
-  * [maps.stamen.com](http://maps.stamen.com/) - Free map tiles and tile hosting.
+  * [maps.stamen.com](https://maps.stamen.com/) - Free map tiles and tile hosting.
   * [maptiler.com](https://www.maptiler.com/cloud/) - Vector maps, map services and SDKs for map visualization. Free vector tiles with weekly updates and four map styles.
   * [nominatim.org](https://nominatim.org/) - OpenStreetMap's free geocoding service, providing global address search functionality and reverse geocoding capabilities.
   * [opencagedata.com](https://opencagedata.com) - Geocoding API aggregating OpenStreetMap and other open geo sources. Two thousand five hundred free queries/day.
@@ -1409,16 +1468,16 @@ Update Time, five active automations, webhooks.
 
 
   * [Android Studio](https://developer.android.com/studio) - Android Studio provides the fastest tools for building apps on every type of Android device. Open Source IDE is free for everyone and the best Android app development. Available for Windows, Mac, Linux, and even ChromeOS!
-  * [AndroidIDE](https://m.androidide.com/) - An Open Source IDE to develop real, Gradle-based Android applications on Android devices.
   * [Apache Netbeans](https://netbeans.apache.org/) - Development Environment, Tooling Platform and Application Framework.
   * [apiary.io](https://apiary.io/) - Collaborative design API with instant API mock and generated documentation (Free for unlimited API blueprints and unlimited users with one admin account and hosted documentation).
   * [BBEdit](https://www.barebones.com/) - BBEdit is a popular and extensible editor for macOS. Free Mode provides a [powerful core feature set](https://www.barebones.com/products/bbedit/comparison.html) and an upgrade path to advanced features.
   * [Binder](https://mybinder.org/) - Turn a Git repo into a collection of interactive notebooks. It is a free public service.
   * [BlueJ](https://bluej.org) - A free Java Development Environment designed for beginners, used by millions worldwide. Powered by Oracle & simple GUI to help beginners.
-  * [Brackets](http://brackets.io/) - Brackets is an open-source text editor specifically designed for web development. It is lightweight, easy to use, and highly customizable.
+  * [Brackets](https://brackets.io/) - Brackets is an open-source text editor specifically designed for web development. It is lightweight, easy to use, and highly customizable.
   * [cacher.io](https://www.cacher.io) - Code snippet organizer with labels and support for 100+ programming languages.
   * [cocalc.com](https://cocalc.com/) - Collaborative calculation in the cloud. Browser access to full Ubuntu with built-in collaboration and lots of free software for mathematics, science, data science, preinstalled: Python, LaTeX, Jupyter Notebooks, SageMath, scikitlearn, etc.
   * [Code::Blocks](https://codeblocks.org) - Free Fortran & C/C++ IDE. Open Source and runs on Windows,macOS & Linux.
+  * [Codeground](https://codeground.ai/) - Free browser IDE and playgrounds for 15+ languages plus Postgres, MySQL, MongoDB, and Redis. Shareable snippets, coding interviews, and cloud workspaces. Free playgrounds need no install.
   * [codiga.io](https://codiga.io/) - Coding Assistant that lets you search, define, and reuse code snippets directly in your IDE. Free for individual and small organizations.
   * [Components.studio](https://webcomponents.dev/) - Code components in isolation, visualize them in stories, test them, and publish them on npm.
   * [Eclipse Che](https://www.eclipse.org/che/) - Web-based and Kubernetes-Native IDE for Developer Teams with multi-language support. Open Source and community-driven. An online instance hosted by Red Hat is available at [workspaces.openshift.com](https://workspaces.openshift.com/).
@@ -1430,7 +1489,6 @@ Update Time, five active automations, webhooks.
   * [Lazarus](https://www.lazarus-ide.org/) - Lazarus is a Delphi-compatible cross-platform IDE for Rapid Application Development.
   * [MarsCode](https://www.marscode.com/) - A free AI-powered cloud-based IDE.
   * [micro-jaymock](https://micro-jaymock.now.sh/) - Tiny API mocking microservice for generating fake JSON data.
-  * [mockable.io](https://www.mockable.io/) - Mockable is a simple configurable service to mock out RESTful API or SOAP web services. This online service allows you to quickly define REST API or SOAP endpoints and have them return JSON or XML data.
   * [mockaroo](https://mockaroo.com/) - Mockaroo lets you generate realistic test data in CSV, JSON, SQL, and Excel formats. You can also create mocks for back-end API.
   * [Mocklets](https://mocklets.com) - an HTTP-based mock API simulator that helps simulate APIs for faster parallel development and more comprehensive testing, with a lifetime free tier.
   * [OneCompiler](https://onecompiler.com/) - Free online compiler supporting 70+ languages including Java, Python, C++, JavaScript.
@@ -1470,9 +1528,9 @@ Update Time, five active automations, webhooks.
   * [Google Analytics](https://analytics.google.com/) - Google Analytics
   * [heap.io](https://heap.io) - Automatically captures every user action in iOS or web apps. Free for up to 10K monthly sessions.
   * [Hightouch](https://hightouch.com/) - Hightouch is a Reverse ETL platform that helps you sync customer data from your data warehouse to your CRM, marketing, and support tools. The free tier offers you one destination to sync data to.
+  * [HitKeep](https://hitkeep.com/) - Privacy-focused, open-source web and product analytics platform with a free cloud plan for 3 websites, 3 team members, 60-day data retention, AI analytics, goals, funnels, events, and hits.
   * [Hotjar](https://hotjar.com) - Website Analytics and Reports . Free Plan allows 2000 pageviews/day. One hundred snapshots/day (max capacity: 300). Three snapshot heatmaps can be stored for 365 days. Unlimited Team Members. Also in App and standalone surveys, feedback widgets with screenshots. Free tier allows creating 3 surveys & 3 feedback widgets and collecting 20 responses per month.
   * [LogSpot](https://logspot.io) - Full unified web and product analytics platform, including embeddable analytics widgets and automated robots (slack, telegram, and webhooks). Free plan includes 10,000 events per month.
-  * [MetricsWave](https://metricswave.com) - Privacy-friendly Google Analytics alternative for developers. Free plan allows 1M pageviews per month without credit card required.
   * [Mixpanel](https://mixpanel.com/) - 100,000 monthly tracked users, unlimited data history and seats, US or EU data residency
   * [Moesif](https://www.moesif.com) - API analytics for REST and GraphQL. (Free up to 500,000 API calls/mo)
   * [PostHog](https://posthog.com) - Full Product Analytics suite free for up to 1m tracked events per month. Also provides unlimited in-App Surveys with 250/month responses.
@@ -1487,7 +1545,6 @@ Update Time, five active automations, webhooks.
   * [TrackWith Dicloud](https://dicloud.net/trackwith-privacy-focused-analytics/) - Free lightweight privacy-focused alternative to Google Analytics. Unlimited pageviews, unlimited visitor, unlimited page heatmaps & goal tracking. Free for up to 3 domains and 600 session replay per domain.
   * [Umami](https://umami.is/) - Simple, fast, privacy-focused, open-source alternative to Google Analytics.
   * [usabilityhub.com](https://usabilityhub.com/) - Test designs and mockups on real people and track visitors. Free for one user, unlimited tests
-  * [Userbird](https://userbird.com) - Google Analytics alternative with heatmaps, session recordings and revenue tracking.
 
 **[⬆️ Back to Top](#table-of-contents)**
 
@@ -1516,17 +1573,21 @@ Update Time, five active automations, webhooks.
 ## Payment and Billing Integration
 
   * [Adapty.io](https://adapty.io/) - One-stop solution with open-source SDK for mobile in-app subscription integration to iOS, Android, React Native, Flutter, Unity, or web app. Free up to $10k monthly revenue.
+  * [AllRatesToday](https://allratestoday.com) - Real-time mid-market exchange rates for 150+ currencies with official JavaScript, Python, and PHP SDKs. Free tier includes 300 requests/month over HTTPS.
+  * [Codex](https://www.codex.io) - Real-time crypto and prediction market data API for pricing, charts, transactions, wallet balances, and trending data. The free tier offers 10,000 requests for free per month, with credit card or crypto authentication required.
+  * [Churnkey](https://churnkey.co) - Cancel flows (open-sourced), churn metrics, and revenue analytics for subscription businesses. Free forever.
   * [CoinMarketCap](https://coinmarketcap.com/api/) - Provides cryptocurrency market data including the latest crypto and fiat currency exchange rates. The free tier offers 10K call credits/month.
   * [Currencyapi](https://currencyapi.com) - Free currency conversion and exchange rate data API. Free 300 requests per month, 10 requests per minute for private use.
   * [CurrencyApi](https://currencyapi.net/) - Live Currency Rates for Physical and Cryptocurrencies, delivered in JSON and XML. The free tier offers 1,250 API requests/month.
   * [CurrencyFreaks](https://currencyfreaks.com/) - Provides current and historical currency exchange rates. Free DEVELOPER plan available with 1000 requests/month.
   * [currencylayer](https://currencylayer.com/) - Reliable Exchange Rates and Currency Conversion for your Business, 100 API requests/month free.
   * [exchangerate-api.com](https://www.exchangerate-api.com) - An easy-to-use currency conversion JSON API. The free tier updates once per day with a limit of 1,500 requests/month.
+  * [Exchange Rate API](https://exchange-rateapi.com) - Real-time currency rates for 160+ currencies with 60-second updates and official SDKs. Free tier includes 300 requests/month.
   * [FraudLabsPRO](https://www.fraudlabspro.com) - Help merchants to prevent payment fraud and chargebacks. Free Micro Plan available with 500 queries/month.
   * [FxRatesAPI](https://fxratesapi.com) - Provides real-time and historical exchange rates. The free tier requires attribution.
   * [Moesif API Monetization](https://www.moesif.com/) - Generate revenue from APIs via usage-based billing. Connect to Stripe, Chargebee, etc. The free tier offers 30,000 events/month.
   * [ParityVend](https://www.ambeteco.com/ParityVend/) - Automatically adjust pricing based on visitor location to expand your business globally and reach new markets (purchasing power parity). The free plan includes 7,500 API requests/month.
-  * [Qonversion](http://qonversion.io/) - All-in-one cross-platform subscription management platform offering analytics, A/B testing, Apple Search Ads, remote configs, and growth tools for optimizing in-app purchases and monetization. Compatible with iOS, Android, React Native, Flutter, Unity, Cordova, Stripe, and web. Free up to $10k in monthly tracked revenue.
+  * [Qonversion](https://qonversion.io/) - All-in-one cross-platform subscription management platform offering analytics, A/B testing, Apple Search Ads, remote configs, and growth tools for optimizing in-app purchases and monetization. Compatible with iOS, Android, React Native, Flutter, Unity, Cordova, Stripe, and web. Free up to $10k in monthly tracked revenue.
   * [RevenueCat](https://www.revenuecat.com/) - Hosted backend for in-app purchases and subscriptions (iOS and Android). Free up to $2.5k/mo in tracked revenue.
   * [vatlayer](https://vatlayer.com/) - Instant VAT number validation and EU VAT rates API, free 100 API requests/month
 
@@ -1534,9 +1595,9 @@ Update Time, five active automations, webhooks.
 
 ## Docker Related
 
+  * [Appish](https://appi.sh/) - Host Docker containers for demos with just a docker push. Free tier includes 1 slot with 2-hour sessions.
   * [Container Registry Service](https://container-registry.com/) - Harbor based Container Management Solution. The free tier offers 1 GB of storage for private repositories.
   * [Docker Hub](https://hub.docker.com) - One free private repository and unlimited public repositories to build and store Docker images
-  * [Play with Docker](https://labs.play-with-docker.com/) - A simple, interactive, fun playground to learn Docker.
   * [quay.io](https://quay.io/) - Build and store container images with unlimited free public repositories
   * [ttl.sh](https://ttl.sh/) - Anonymous & ephemeral Docker image registry
 
@@ -1565,12 +1626,14 @@ Update Time, five active automations, webhooks.
 ## Screenshot APIs
 
   * [ApiFlash](https://apiflash.com) - A screenshot API based on Aws Lambda and Chrome. Handles full page, captures timing, and viewport dimensions.
-  * [microlink.io](https://microlink.io/) - It turns any website into data such as metatags normalization, beauty link previews, scraping capabilities, or screenshots as a service. 250 requests/day every day free.
+  * [microlink.io](https://microlink.io/) - It turns any website into data such as metatags normalization, beauty link previews, scraping capabilities, or screenshots as a service. 50 requests/day every day free.
   * [PhantomJsCloud](https://PhantomJsCloud.com) - Browser automation and page rendering.  Free Tier offers up to 500 pages/day.  Free Tier since 2017.
+  * [Renderwolf](https://ironfang.uk/renderwolf) - UK-based screenshot, PDF, image, QR code and clip rendering API with reusable templates and signed URLs. 250 free renders a month with no payment details needed to get started.
   * [screenshotbase.com](https://screenshotbase.com) - 300 free screenshots / month. Take screenshots from any url. Fast, free & scalable.
   * [screenshotlayer.com](https://screenshotlayer.com/) - Capture highly customizable snapshots of any website. Free 100 snapshots/month
   * [screenshotmachine.com](https://www.screenshotmachine.com/) - Capture 100 snapshots/month, png, gif and jpg, including full-length captures, not only home page
   * [Screenshot Scout](https://screenshotscout.com/) - Screenshot API for developers. Clean, production-ready screenshots from any URL in one request. Free plan includes 200 screenshots per month, forever.
+  * [Shotpipe](https://shotpipe.io) - Screenshot and Open Graph image API built for static sites. Free tier includes 100 renders/month, no card required. cached renders are free.
   * [SnapAPI](https://snapapi.pics) - Screenshot, video recording, PDF generation, and web data extraction API. Free plan includes 200 screenshots/month.
   * [thumbnail.ws](https://thumbnail.ws) - API for generating thumbnails of websites. Free 1,000 requests/month.
 
@@ -1612,6 +1675,7 @@ Update Time, five active automations, webhooks.
   * [redirect.pizza](https://redirect.pizza/) - Easily manage redirects with HTTPS support. The free plan includes 10 sources and 100,000 hits per month.
   * [redirection.io](https://redirection.io/) - SaaS tool for managing HTTP redirections for businesses, marketing and SEO.
   * [redirs.com](https://www.redirs.com/) — Easy domain redirects with auto-SSL, analytics, and URL path forwarding. Free for basic use (up to 5 domains).
+  * [RedirHub](https://www.redirhub.com/) - API-first URL redirect infrastructure with custom nameservers, edge network, HTTPS, and proactive link monitoring. Free plan includes 2 hostnames, 100K requests per month, auto-SSL, path forwarding, and REST API access.
   * [ReqBin](https://reqbin.com/) - Post HTTP Requests Online. Popular Request Methods include GET, POST, PUT, DELETE, and HEAD. Supports Headers and Token Authentication. Includes a basic login system for saving your requests.
   * [Smartcar API](https://smartcar.com) - An API for cars to locate, get fuel tank, battery levels, odometer, unlock/lock doors, etc.
   * [Sunrise and Sunset](https://sunrisesunset.io/api/) - Get sunrise and sunset times for a given longitude and latitude.
@@ -1625,6 +1689,7 @@ Update Time, five active automations, webhooks.
 
 ## Remote Desktop Tools
 
+  * [Parsec](https://parsec.app/) - Free for installation on unlimited number of devices(for personal use) and allows up to 20 connections to a single device at once. (great for gaming/low latency work)
   * [AnyDesk](https://anydesk.com) -  Free for 3 devices, no limits on the number and duration of sessions
   * [Getscreen.me](https://getscreen.me) -  Free for 2 devices, no limits on the number and duration of sessions
   * [RemSupp](https://remsupp.com) - On-demand support and permanent access to devices (2 sessions/day for free)
